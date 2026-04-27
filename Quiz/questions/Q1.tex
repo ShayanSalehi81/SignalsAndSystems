@@ -1,0 +1,45 @@
+در عبارت زیر:
+\begin{flalign*}
+    \mathcal{L}\{\delta(t)\} &= \int_{-\infty}^{\infty} \delta(t) e^{-st} dt \\
+                             &\implies a_0 Y^{(n)} + a_1 Y^{(n-1)} + \ldots + a_{n-1} Y' + a_n Y = b_0 v^{(m)} + b_1 v^{(m-1)} + \ldots + b_{m-1} v' + b_m v \\
+                             &\implies (S^n + a_1 S^{n-1} + \ldots + a_{n-1} S + a_n) Y(s) = (b_0 S^m + b_1 S^{m-1} + \ldots + b_{m-1} S + b_m) V(s) \\
+                             &\implies \frac{Y(S)}{V(S)} = \frac{b_0 S^m + b_1 S^{m-1} + \ldots + b_{m-1} S + b_m}{S^n + a_1 S^{n-1} + \ldots + a_{n-1} S + a_n} \\
+                             &\implies \frac{Y(S)}{V(S)} = \frac{S^m + \ldots + b_{m}}{S^n + \ldots + a_n} \\
+\end{flalign*}
+
+حال برای علی بودن این سیستم ثابت کنید که می‌بایست $m \le n$ باشد.
+
+\textbf{پاسخ:}
+
+فرض کنید سیستم \lr{LTI} دارای تابع انتقال زیر باشد:
+\begin{flalign*}
+H(s)=\frac{Y(s)}{V(s)}=\frac{b_0 s^m+b_1 s^{m-1}+\cdots+b_m}{s^n+a_1 s^{n-1}+\cdots+a_n} &&
+\end{flalign*}
+اگر $m>n$ باشد، با تقسیم چندجمله‌ای داریم:
+\begin{flalign*}
+H(s)=Q(s)+\frac{R(s)}{s^n+a_1 s^{n-1}+\cdots+a_n},\qquad 
+Q(s)=c_{m-n}s^{m-n}+\cdots+c_1 s+c_0 &&
+\end{flalign*}
+حال با توجه به این که
+$\mathcal{L}\{\delta^{(k)}(t)\}=s^k$
+خواهیم داشت:
+\begin{flalign*}
+h(t)=\mathcal{L}^{-1}\{H(s)\}
+=\sum_{k=0}^{m-n} c_k\,\delta^{(k)}(t)+h_p(t) &&
+\end{flalign*}
+پس برای هر ورودی $v(t)$:
+\begin{flalign*}
+y(t)=(h*v)(t)
+=\sum_{k=0}^{m-n} c_k\,(\delta^{(k)}*v)(t)+(h_p*v)(t)
+=\sum_{k=0}^{m-n} c_k\,v^{(k)}(t)+(h_p*v)(t) &&
+\end{flalign*}
+برای $k\ge 1$ طبق تعریف مشتق (دوطرفه) داریم:
+\begin{flalign*}
+v^{(k)}(t_0)=\lim_{\Delta\to 0}\frac{v^{(k-1)}(t_0+\Delta)-v^{(k-1)}(t_0)}{\Delta} &&
+\end{flalign*}
+که شامل مقادیر $v(t_0+\Delta)$ برای $\Delta>0$ است؛ بنابراین وجود جمله‌ی $v^{(k)}(t_0)$ (برای $k\ge 1$) یعنی $y(t_0)$ به ورودیِ آینده وابسته می‌شود و سیستم غیرعلی خواهد بود.
+
+پس برای علی بودن باید $Q(s)$ هیچ توانِ مثبتِ $s$ نداشته باشد؛ یعنی
+\begin{flalign*}
+m-n\le 0 \quad \Longrightarrow\quad m\le n &&
+\end{flalign*}
