@@ -1,0 +1,28 @@
+برای یک سیستم \lr{LTI} شرط پایداری \lr{BIBO} این است که پاسخ ضربه به طور مطلق انتگرال‌پذیر باشد:
+$$
+\int_{-\infty}^{\infty} |h(t)|\,dt < \infty.
+$$
+
+با توجه به
+$$
+h(t)=t e^{-t}u(t),
+$$
+داریم $h(t)=0$ برای $t<0$ و برای $t\ge 0$ نیز $t e^{-t}\ge 0$، پس:
+\begin{flalign*}
+\int_{-\infty}^{\infty} |h(t)|\,dt
+&=\int_{0}^{\infty} t e^{-t}\,dt. &&
+\end{flalign*}
+
+حال با جزءبه‌جزء:
+\begin{flalign*}
+\int_{0}^{\infty} t e^{-t}\,dt
+&=\left[-t e^{-t}\right]_{0}^{\infty}+\int_{0}^{\infty} e^{-t}\,dt \\
+&=\Big(0-0\Big)+\left[-e^{-t}\right]_{0}^{\infty}
+=1. &&
+\end{flalign*}
+
+چون
+$$
+\int_{-\infty}^{\infty} |h(t)|\,dt = 1 < \infty,
+$$
+پس سیستم \lr{BIBO stable} است.

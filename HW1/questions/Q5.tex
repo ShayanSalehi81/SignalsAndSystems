@@ -1,0 +1,36 @@
+برای به‌دست آوردن تابع تبدیل حلقه‌بسته، سیگنال‌ها را نام‌گذاری می‌کنیم. از آن‌جایی که دو مسیر بازخورد موازی هستند، سیگنال بازخورد برابر است با
+\begin{flalign*}
+B(s) = H_1(s)C(s) + H_2(s)C(s) = \big(H_1(s)+H_2(s)\big)C(s). &&
+\end{flalign*}
+
+در جمع‌کننده‌ی اول (بازخورد منفی):
+\begin{flalign*}
+E(s)=R(s)-B(s)=R(s)-\big(H_1(s)+H_2(s)\big)C(s). &&
+\end{flalign*}
+
+در جمع‌کننده‌ی دوم (جمع با مسیر پیش‌خور $G_1$):
+\begin{flalign*}
+U(s)=E(s)+G_1(s)R(s). &&
+\end{flalign*}
+
+و در خروجی:
+\begin{flalign*}
+C(s)=G_2(s)\,U(s)=G_2(s)\Big(E(s)+G_1(s)R(s)\Big). &&
+\end{flalign*}
+
+پس:
+\begin{flalign*}
+C(s)
+&=G_2(s)\Big(R(s)-\big(H_1(s)+H_2(s)\big)C(s)+G_1(s)R(s)\Big)\\
+&=G_2(s)\big(1+G_1(s)\big)R(s)-G_2(s)\big(H_1(s)+H_2(s)\big)C(s). &&
+\end{flalign*}
+
+بنابراین:
+\begin{flalign*}
+C(s)\Big(1+G_2(s)\big(H_1(s)+H_2(s)\big)\Big)=G_2(s)\big(1+G_1(s)\big)R(s). &&
+\end{flalign*}
+
+در نتیجه تابع تبدیل حلقه‌بسته:
+\begin{flalign*}
+\frac{C(s)}{R(s)}=\frac{G_2(s)\big(1+G_1(s)\big)}{1+G_2(s)\big(H_1(s)+H_2(s)\big)}. &&
+\end{flalign*}

@@ -1,0 +1,85 @@
+\LTR
+
+1) Given the following unit sample response
+\begin{itemize}
+    \item $h[n] = (n + 1)\alpha^n u[n]$
+\end{itemize}
+where $|\alpha| < 1$. \underline{Find the step response of the system.}
+
+Note: The system is LTI.
+
+\vspace{1.5em}
+
+2) \underline{Check} whether the following signal is a power signal($0 < P_\infty < \infty$) , energy signal($0 < E_\infty < \infty$) or both.
+\begin{itemize}
+    \item $y(t) = e^{-|at|}\cos (\beta t)$
+\end{itemize}
+
+\vspace{1.5em}
+
+3) \underline{Calculate} the convolution of 2 following signal
+\begin{itemize}
+    \item $x(t) = u(t) - 2u(t - 2) + u(t - 5)$
+    \item $h(t) = e^{2t}u(1 - t)$
+\end{itemize}
+
+\vspace{1.5em}
+
+4) \underline{Consider a transformation}, denoted by $T$, that operates on input signals. This transformation is defined by the following two properties:
+
+\begin{enumerate}
+    \item \underline{Basic Transformation Rule}: For any input of the form $x(t) = t^k$(where $k$is a non-negative integer), the corresponding output is $y(t) = \cos (kt)$. That is:
+    \[
+        T\{t^k\} = \cos (kt)
+    \]
+    
+    \item \underline{Additivity for Power Function Combinations}: The transformation satisfies the additivity and homogeneity properties for inputs that are algebraic sums of power functions ($t^k$). Specifically, if the input is $x(t) = c_1t^{k_1} + c_2t^{k_2} + \cdots + c_nt^{k_n}$, then the output is given by:
+    \[
+        T\{x(t)\} = c_1T\{t^{k_1}\} + c_2T\{t^{k_2}\} + \cdots + c_nT\{t^{k_n}\}
+    \]
+\end{enumerate}
+
+Note: This transformation is not necessarily a fully linear system, but it specifically exhibits additivity and homogeneity for this class of inputs.
+
+\underline{Given the definition above, find the response of the transformation $T$ to the following input:}
+\[
+    x(t) = \frac{1 + t^{10}}{1 + t^2}
+\]
+
+\vspace{1.5em}
+
+5) Transfer function for a close loop block diagram is basically the ratio of the output signal to the input signal denoted in the following question by $\frac{C(s)}{R(s)}$.
+
+\underline{Find the closed loop transfer function} for the following block diagram
+
+
+\vspace{1.5em}
+
+6) Transfer function for a close loop block diagram is basically the ratio of the output signal to the input signal denoted in the following question by $\frac{C(s)}{R(s)}$.
+
+\underline{Find the closed loop transfer function} for the following block diagram.
+
+\vspace{1.5em}
+
+7) \underline{Check} the \underline{linearity, causality, time variation ,and stability} of the following system. Give a \underline{full solution}.
+\begin{itemize}
+    \item $y(t) = x(2) + x(t - 6)$
+\end{itemize}
+
+\vspace{1.5em}
+
+8)\underline{Check} whether the following signal \underline{is stable or not}. Give a \underline{full solution}.
+\begin{itemize}
+    \item $h(t) = te^{-t}u(t)$
+\end{itemize}
+
+Note: The system is LTI.
+
+\vspace{1.5em}
+
+9)\underline{Is} the following statement \underline{correct or not}? Give a \underline{full solution}.
+\begin{itemize}
+    \item $x[n] * (h[n]g[n]) = (x[n] * h[n])g[n]$
+\end{itemize}
+
+\RTL

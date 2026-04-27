@@ -1,0 +1,40 @@
+برای یک سیستم \lr{LTI}، پاسخ پله برابر خروجی سیستم به ورودی $u[n]$ است:
+$$s[n] \triangleq (h*u)[n].$$
+با تعریف کانولوشن گسسته داریم:
+\begin{align*}
+s[n] &= \sum_{k=-\infty}^{\infty} h[k]\,u[n-k].
+\end{align*}
+از آنجا که
+$$h[k] = (k+1)\alpha^k u[k],$$
+پس فقط برای $k\ge 0$ غیرصفر است و همچنین $u[n-k]=1$ وقتی $k\le n$.
+بنابراین:
+\begin{align*}
+s[n] &= \sum_{k=0}^{n} (k+1)\alpha^k,\qquad n\ge 0,\\
+s[n] &= 0,\qquad n<0.
+\end{align*}
+پس می‌توان نوشت:
+$$s[n] = \left(\sum_{k=0}^{n} (k+1)\alpha^k\right)u[n].$$
+
+اکنون مجموع را به فرم بسته به دست می‌آوریم (برای $\alpha\neq 1$ که با توجه به $|\alpha|<1$ برقرار است).
+ابتدا مجموع هندسی:
+\begin{align*}
+S_0(n) &= \sum_{k=0}^{n}\alpha^k = \frac{1-\alpha^{n+1}}{1-\alpha}.
+\end{align*}
+همچنین مجموعِ $k\alpha^k$ (مثلاً با مشتق‌گیری از $S_0(n)$ نسبت به $\alpha$ و ضرب در $\alpha$):
+\begin{align*}
+S_1(n) &= \sum_{k=0}^{n} k\alpha^k
+= \frac{\alpha-(n+1)\alpha^{n+1}+n\alpha^{n+2}}{(1-\alpha)^2}.
+\end{align*}
+پس:
+\begin{align*}
+\sum_{k=0}^{n}(k+1)\alpha^k
+&= \sum_{k=0}^{n}k\alpha^k + \sum_{k=0}^{n}\alpha^k \\
+&= S_1(n)+S_0(n) \\
+&= \frac{1-(n+2)\alpha^{n+1}+(n+1)\alpha^{n+2}}{(1-\alpha)^2}.
+\end{align*}
+
+\begin{align*}
+s[n] = \frac{1-(n+2)\alpha^{n+1}+(n+1)\alpha^{n+2}}{(1-\alpha)^2}\,u[n],
+\qquad |\alpha|<1.
+\end{align*}
+(و برای اطمینان: $\lim_{n\to\infty}s[n]=\frac{1}{(1-\alpha)^2}$ چون $|\alpha|<1$.)

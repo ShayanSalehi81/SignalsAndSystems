@@ -1,0 +1,56 @@
+سیگنال داده شده:
+$$
+y(t)=e^{-|at|}\cos(\beta t)
+$$
+$$
+|y(t)|^2=e^{-2|at|}\cos^2(\beta t)
+$$
+
+\subsection*{انرژی ($E_\infty$)}
+\begin{itemize}
+\item اگر $a>0$:
+\begin{flalign*}
+E_\infty&=\int_{-\infty}^{\infty} e^{-2|at|}\cos^2(\beta t)\,dt
+=2\int_{0}^{\infty} e^{-2at}\cos^2(\beta t)\,dt &&\\
+&=2\int_{0}^{\infty} e^{-2at}\frac{1+\cos(2\beta t)}{2}\,dt
+=\int_{0}^{\infty} e^{-2at}\,dt+\int_{0}^{\infty} e^{-2at}\cos(2\beta t)\,dt &&\\
+&=\frac{1}{2a}+\frac{2a}{(2a)^2+(2\beta)^2}
+=\frac{1}{2a}+\frac{a}{2(a^2+\beta^2)}
+=\frac{2a^2+\beta^2}{2a(a^2+\beta^2)} &&
+\end{flalign*}
+پس $0<E_\infty<\infty$ و سیگنال \lr{energy signal} است.
+\item اگر $a=0$:
+$$
+y(t)=\cos(\beta t)\quad \Rightarrow\quad E_\infty=\int_{-\infty}^{\infty}\cos^2(\beta t)\,dt=\infty
+$$
+\item اگر $a<0$:
+$$
+e^{-|at|}=e^{|a||t|}\ \text{(رشد نمایی)}\quad \Rightarrow\quad E_\infty=\infty
+$$
+\end{itemize}
+
+$$
+P_\infty=\lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}|y(t)|^2\,dt
+$$
+\begin{itemize}
+\item اگر $a>0$ چون $E_\infty<\infty$ داریم:
+$$
+0\le P_\infty\le \lim_{T\to\infty}\frac{E_\infty}{2T}=0
+\quad\Rightarrow\quad P_\infty=0
+$$
+پس سیگنال \lr{power signal} نیست (طبق شرط $0<P_\infty<\infty$).
+\item اگر $a=0$:
+\begin{flalign*}
+P_\infty&=\lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}\cos^2(\beta t)\,dt
+=\lim_{T\to\infty}\frac{1}{2T}\left(T+\frac{\sin(2\beta T)}{2\beta}\right)
+=\frac{1}{2} &&
+\end{flalign*}
+پس \lr{power signal} است.
+\item اگر $a<0$ به علت رشد نمایی، انتگرال بالا واگرا شده و $P_\infty=\infty$.
+\end{itemize}
+
+\begin{itemize}
+\item $a>0$: سیگنال فقط \lr{energy signal} است، با $0<E_\infty<\infty$ و $P_\infty=0$.
+\item $a=0$: سیگنال فقط \lr{power signal} است، با $P_\infty=\frac{1}{2}$ و $E_\infty=\infty$.
+\item $a<0$: نه انرژی‌سیگنال و نه توان‌سیگنال (هر دو نامتناهی).
+\end{itemize}

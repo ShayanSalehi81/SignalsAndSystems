@@ -1,0 +1,58 @@
+ابتدا توجه کنید که در عبارت
+$h[n]g[n]$
+منظور ضرب نقطه‌ای (نمونه به نمونه) است، نه کانولوشن. همچنین
+$*$ نشان‌دهنده‌ی \lr{convolution} است.
+
+اگر دو طرف را به صورت جمع کانولوشن بنویسیم:
+\begin{flalign*}
+y_1[n]
+&= x[n] * (h[n]g[n])
+= \sum_{k=-\infty}^{\infty} x[k]\,(h[n-k]g[n-k]),\\
+y_2[n]
+&= (x[n]*h[n])\,g[n]
+=\Big(\sum_{k=-\infty}^{\infty} x[k]\,h[n-k]\Big)\,g[n]
+= \sum_{k=-\infty}^{\infty} x[k]\,h[n-k]\,g[n]. &&
+\end{flalign*}
+می‌بینیم که در $y_1[n]$ عبارت $g[n-k]$ داخل جمع است ولی در $y_2[n]$ عبارت $g[n]$ مستقل از $k$ است؛ پس به طور کلی
+$y_1[n]\neq y_2[n]$
+(مگر در حالت‌های خاص مثل ثابت بودن $g[n]$).
+
+برای رد کردن گزاره، یک مثال نقض می‌دهیم. انتخاب کنید:
+\begin{flalign*}
+x[n] &= \delta[n]+\delta[n-1],\\
+h[n] &= \delta[n]+\delta[n-1],\\
+g[n] &= \delta[n]+2\delta[n-1]. &&
+\end{flalign*}
+
+ابتدا ضرب نقطه‌ای:
+\begin{flalign*}
+h[n]g[n]
+&=(\delta[n]+\delta[n-1])(\delta[n]+2\delta[n-1])\\
+&=\delta[n]+2\delta[n-1], &&
+\end{flalign*}
+چون $\delta[n]\delta[n-1]=0$.
+
+اکنون سمت چپ:
+\begin{flalign*}
+x[n]*(h[n]g[n])
+&=(\delta[n]+\delta[n-1])*(\delta[n]+2\delta[n-1])\\
+&=\delta[n]+3\delta[n-1]+2\delta[n-2]. &&
+\end{flalign*}
+
+سمت راست:
+\begin{flalign*}
+(x[n]*h[n])\,g[n]
+&=\big((\delta[n]+\delta[n-1])*(\delta[n]+\delta[n-1])\big)\,(\delta[n]+2\delta[n-1])\\
+&=\big(\delta[n]+2\delta[n-1]+\delta[n-2]\big)\,(\delta[n]+2\delta[n-1])\\
+&=\delta[n]+4\delta[n-1]. &&
+\end{flalign*}
+
+چون
+$$
+\delta[n]+3\delta[n-1]+2\delta[n-2]\neq \delta[n]+4\delta[n-1],
+$$
+پس گزاره
+$$
+x[n] * (h[n]g[n]) = (x[n] * h[n])g[n]
+$$
+در حالت کلی نادرست است.

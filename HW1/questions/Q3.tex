@@ -1,0 +1,51 @@
+برای خروجی سیستم داریم
+$$
+y(t) = (x*h)(t).
+$$
+با خطی بودن و خاصیت شیفت در \lr{convolution} می‌نویسیم:
+$$
+x(t)=u(t)-2u(t-2)+u(t-5)
+\ \ \Longrightarrow\ \
+y(t)=g(t)-2g(t-2)+g(t-5),
+$$
+که در آن
+$$
+g(t)=(u*h)(t).
+$$
+
+ابتدا $g(t)$ را حساب می‌کنیم:
+\begin{flalign*}
+g(t)
+&=\int_{-\infty}^{\infty} u(\tau)\,h(t-\tau)\,d\tau
+=\int_{0}^{\infty} e^{2(t-\tau)}\,u\big(1-(t-\tau)\big)\,d\tau \\
+&=\int_{0}^{\infty} e^{2(t-\tau)}\,u\big(\tau-(t-1)\big)\,d\tau
+=\int_{\max(0,t-1)}^{\infty} e^{2(t-\tau)}\,d\tau \\
+&=e^{2t}\int_{\max(0,t-1)}^{\infty} e^{-2\tau}\,d\tau
+=\frac{e^{2t}}{2}\,e^{-2\max(0,t-1)}.
+\end{flalign*}
+پس به صورت قطعه‌ای:
+\begin{flalign*}
+g(t)=
+\begin{cases}
+\frac{1}{2}e^{2t} & t\le 1,\\
+\frac{1}{2}e^{2} & t>1.
+\end{cases}
+&&
+\end{flalign*}
+
+اکنون
+$y(t)=g(t)-2g(t-2)+g(t-5)$
+و نقاط شکست از $t=1,3,6$ به دست می‌آیند. بنابراین:
+\begin{flalign*}
+y(t)=
+\begin{cases}
+\frac{1}{2}e^{2t}-e^{2t-4}+\frac{1}{2}e^{2t-10}
+& t\le 1,\\[4pt]
+\frac{1}{2}e^{2}-e^{2t-4}+\frac{1}{2}e^{2t-10}
+& 1<t<3,\\[4pt]
+-\frac{1}{2}e^{2}+\frac{1}{2}e^{2t-10}
+& 3\le t<6,\\[4pt]
+0 & t\ge 6.
+\end{cases}
+&&
+\end{flalign*}

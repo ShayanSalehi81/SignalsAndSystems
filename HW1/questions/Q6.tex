@@ -1,0 +1,33 @@
+ابتدا سیگنال بعد از جمع‌کننده‌ی اول را $E(s)$ و سیگنال بازخورد را $B(s)$ می‌گیریم. از شکل:
+
+\begin{itemize}
+    \item در مسیر رو به جلو، دو بلوک $G_1$ و $G_2$ موازی بوده و در جمع‌کننده‌ی خروجی با علامت مثبت جمع می‌شوند، پس
+    $$
+    C(s)=\big(G_1(s)+G_2(s)\big)\,E(s).
+    $$
+    \item در مسیر بازخورد، خروجی $C(s)$ وارد دو بلوک $G_3$ و $G_4$ می‌شود و در جمع‌کننده‌ی پایین با علامت‌های نشان‌داده‌شده ترکیب می‌گردد، بنابراین
+    $$
+    B(s)=G_3(s)C(s)-G_4(s)C(s)=\big(G_3(s)-G_4(s)\big)C(s).
+    $$
+    \item در جمع‌کننده‌ی ورودی (بازخورد منفی):
+    $$
+    E(s)=R(s)-B(s)=R(s)-\big(G_3(s)-G_4(s)\big)C(s).
+    $$
+\end{itemize}
+
+حال جایگذاری می‌کنیم:
+\begin{flalign*}
+C(s)
+&=\big(G_1(s)+G_2(s)\big)\Big(R(s)-\big(G_3(s)-G_4(s)\big)C(s)\Big) \\
+&=\big(G_1(s)+G_2(s)\big)R(s)-\big(G_1(s)+G_2(s)\big)\big(G_3(s)-G_4(s)\big)C(s). &&
+\end{flalign*}
+
+پس:
+\begin{flalign*}
+C(s)\Big(1+\big(G_1(s)+G_2(s)\big)\big(G_3(s)-G_4(s)\big)\Big)=\big(G_1(s)+G_2(s)\big)R(s). &&
+\end{flalign*}
+
+در نتیجه تابع تبدیل حلقه‌بسته:
+\begin{flalign*}
+\frac{C(s)}{R(s)}=\frac{G_1(s)+G_2(s)}{1+\big(G_1(s)+G_2(s)\big)\big(G_3(s)-G_4(s)\big)}. &&
+\end{flalign*}
