@@ -1,13 +1,13 @@
 # Fdb version 4
-["xdvipdfmx"] 1777315411.37317 "HW.xdv" "HW.pdf" "HW" 1777315411.73715 0
-  "HW.xdv" 1777315411 60912 0948dd090dbfbd2563f812986a2379f6 "xelatex"
+["xdvipdfmx"] 1777315565.85935 "HW.xdv" "HW.pdf" "HW" 1777315566.2318 0
+  "HW.xdv" 1777315565 60872 7658848e16aa4cf7a8844a75357be85e "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1777315409.64592 "d:/Term 02/SignalsAndSystems/HW1/HW/HW.tex" "HW.xdv" "HW" 1777315411.72991 0
+["xelatex"] 1777315564.11487 "d:/Term 02/SignalsAndSystems/HW1/HW/HW.tex" "HW.xdv" "HW" 1777315566.22578 0
   "../commons/alg-fa.tex" 1707886330 1438 630aaa81895929eddba0efb6ab754a8c ""
   "../commons/sharif.png" 1707886330 34782 91c831e22cd5b8b30cdd0d7fa2b74a71 ""
-  "../commons/style.tex" 1777314317 5428 88a13fa46be4fa8b07b8160e6f93c89a ""
+  "../commons/style.tex" 1777315563 5426 c5264eab9c8a1e3be829e7c41fa1c683 ""
   "../questions/Q1.tex" 1777314460 1649 998a6587584731614de75536f9acb4f3 ""
   "../questions/Q2.tex" 1777314622 2015 10772266d01943c90e645c0bc83e6152 ""
   "../questions/Q3.tex" 1777314726 1275 ffbeaec2cb77382b434416e549cf4f01 ""
@@ -234,10 +234,10 @@
   "C:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "C:/Program Files/MiKTeX/tex/xelatex/xetex-pstricks/pstricks.con" 1266284760 204 366747485ba2670f55166e66d1f21249 ""
   "C:/Users/ROG/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1762519379 27033816 3409389256dddeec52c4569a0d18311e ""
-  "HW.aux" 1777315411 164 3ce3a6563ff48c8f1aee953e6facf1ce "xelatex"
-  "HW.out" 1777315410 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1777314991 774 8b762e3ab5c7b196facda5b7f056bdef ""
-  "d:/Term 02/SignalsAndSystems/HW1/HW/HW.tex" 1777314991 774 8b762e3ab5c7b196facda5b7f056bdef ""
+  "HW.aux" 1777315565 164 3ce3a6563ff48c8f1aee953e6facf1ce "xelatex"
+  "HW.out" 1777315565 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1777315541 768 064a813f3dbad5b77c34e6d8cb4de00b ""
+  "d:/Term 02/SignalsAndSystems/HW1/HW/HW.tex" 1777315541 768 064a813f3dbad5b77c34e6d8cb4de00b ""
   (generated)
   "HW.aux"
   "HW.log"

@@ -1,0 +1,36 @@
+\subsection*{الف}
+می‌دانیم اگر
+$y[n] \longleftrightarrow Y(e^{j\omega})$
+آنگاه با استفاده از خاصیت مزدوج مختلط و وارونگی زمان خواهیم داشت
+\begin{flalign*}
+y^*[-n] \longleftrightarrow Y^*(e^{j\omega}). &&
+\end{flalign*}
+حال با قضیهٔ کانولوشن در \lr{DTFT} اگر
+$Z(e^{j\omega}) = X(e^{j\omega})\,Y^*(e^{j\omega})$
+باشد، آنگاه
+\begin{flalign*}
+z[n] = x[n] * y^*[-n]
+= \sum_{k=-\infty}^{\infty} x[k]\,y^*[k-n]. &&
+\end{flalign*}
+
+\subsection*{ب}
+از رابطهٔ معکوس \lr{DTFT} برای
+$z[n]$
+داریم
+\begin{flalign*}
+z[n] = \frac{1}{2\pi}\int_{-\pi}^{\pi} Z(e^{j\omega})e^{j\omega n}\,d\omega
+= \frac{1}{2\pi}\int_{-\pi}^{\pi} X(e^{j\omega})Y^*(e^{j\omega})e^{j\omega n}\,d\omega. &&
+\end{flalign*}
+با قرار دادن $n=0$:
+\begin{flalign*}
+z[0] = \frac{1}{2\pi}\int_{-\pi}^{\pi} X(e^{j\omega})Y^*(e^{j\omega})\,d\omega. &&
+\end{flalign*}
+از قسمت (الف) نیز
+\begin{flalign*}
+z[0] = \sum_{k=-\infty}^{\infty} x[k]\,y^*[k]. &&
+\end{flalign*}
+پس نتیجه می‌شود
+\begin{flalign*}
+\sum_{n=-\infty}^{\infty} x[n]y^*[n]
+= \frac{1}{2\pi}\int_{-\pi}^{\pi} X(e^{j\omega})Y^*(e^{j\omega})\,d\omega. &&
+\end{flalign*}
