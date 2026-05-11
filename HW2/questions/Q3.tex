@@ -1,0 +1,50 @@
+\subsection*{الف}
+فرض کنید $x(t)$ یک پالس مستطیلیِ واحد با دوره‌ی $T$ و پهنای $\tau$ (با $0<\tau<T$) باشد:
+\begin{flalign*}
+x(t)=\sum_{k=-\infty}^{\infty}\Big(u(t-kT)-u(t-kT-\tau)\Big), \qquad \omega_0=\frac{2\pi}{T}. &&
+\end{flalign*}
+ضرایب سری فوریه‌ی نمایی:
+\begin{flalign*}
+c_n=\frac{1}{T}\int_{0}^{T} x(t)e^{-jn\omega_0 t}\,dt
+      =\frac{1}{T}\int_{0}^{\tau} e^{-jn\omega_0 t}\,dt. &&
+\end{flalign*}
+پس
+\begin{flalign*}
+c_0&=\frac{\tau}{T},\\
+c_n&=\frac{1}{T}\,\frac{1-e^{-jn\omega_0\tau}}{jn\omega_0}\qquad (n\neq 0). &&
+\end{flalign*}
+مشتقِ $x(t)$ (به معنای تعمیم‌یافته) یک جمع از ضربه‌هاست:
+\begin{flalign*}
+x'(t)=\sum_{k=-\infty}^{\infty}\Big(\delta(t-kT)-\delta(t-kT-\tau)\Big). &&
+\end{flalign*}
+اگر $d_n$ ضرایب سری فوریه‌ی $x'(t)$ باشد، با استفاده از این که ضرایب سری فوریه‌ی
+$\sum_k \delta(t-t_0-kT)$
+برابر $\frac{1}{T}e^{-jn\omega_0 t_0}$ است، داریم:
+\begin{flalign*}
+d_n=\frac{1}{T}\Big(1-e^{-jn\omega_0\tau}\Big). &&
+\end{flalign*}
+اکنون بررسی رابطه:
+\begin{flalign*}
+jn\omega_0\,c_n
+=jn\omega_0\left(\frac{1}{T}\frac{1-e^{-jn\omega_0\tau}}{jn\omega_0}\right)
+=\frac{1}{T}\Big(1-e^{-jn\omega_0\tau}\Big)
+=d_n \qquad (\forall n). &&
+\end{flalign*}
+پس در این مثال (با درنظرگرفتن مشتقِ ضربه‌ای)، رابطه‌ی
+$d_n = j\frac{2\pi n}{T}c_n$
+صحیح است.
+
+\subsection*{ب}
+فرض کنید $f(t)$ با دوره‌ی $T$ در نقاط $t_i$ (در یک تناوب) ناپیوستگی پرشی داشته باشد و
+\begin{flalign*}
+\Delta_i=f(t_i^+)-f(t_i^-). &&
+\end{flalign*}
+ضرایب سری فوریه‌ی $f(t)$ را $c_n$ بگیرید. اگر $g(t)=f'(t)$ مشتقِ معمولیِ $f$ در نواحیِ هموار باشد
+(یعنی بدونِ ضربه‌ها)، آنگاه با جزءبه‌جزء کردن انتگرال و انتگرال‌گیری جزءبه‌جزء:
+\begin{flalign*}
+g_n&=\frac{1}{T}\int_{0}^{T} f'(t)e^{-jn\omega_0 t}\,dt \\
+&=\frac{jn\omega_0}{T}\int_{0}^{T} f(t)e^{-jn\omega_0 t}\,dt
+-\frac{1}{T}\sum_i \Big(f(t_i^+)-f(t_i^-)\Big)e^{-jn\omega_0 t_i} \\
+&= jn\omega_0\,c_n-\frac{1}{T}\sum_i \Delta_i\,e^{-jn\omega_0 t_i}. &&
+\end{flalign*}
+(برای $n=0$ نیز چون $\sum_i \Delta_i=0$ در سیگنالِ دوره‌ای، نتیجه $g_0=0$ به‌دست می‌آید.)

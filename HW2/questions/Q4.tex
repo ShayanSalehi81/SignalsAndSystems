@@ -1,0 +1,115 @@
+فرض می‌کنیم نمایش سری فوریه گسسته (برای تناوب $N$) به صورت زیر است
+\[
+x[n]=\sum_{k=0}^{N-1} a_k\, e^{j\frac{2\pi}{N}kn},
+\qquad a_{k+N}=a_k .
+\]
+از خواص \lr{DTFS} استفاده می‌کنیم: شیفت زمانی $\Rightarrow$ ضرب فازی، جمع/تفریق $\Rightarrow$ جمع/تفریق ضرایب، و ضرب در زمان $\Rightarrow$ کانولوشن دوری ضرایب.
+
+\subsection*{الف}
+ضرایب را $b_k$ (برای تناوب $2N$) در نظر بگیرید:
+\[
+x[n]=\sum_{k=0}^{2N-1} b_k\, e^{j\frac{2\pi}{2N}kn}
+=\sum_{k=0}^{2N-1} b_k\, e^{j\frac{\pi}{N}kn}.
+\]
+با توجه به $N$-تناوب بودن $x[n]$،
+\[
+b_k=\frac{1}{2N}\sum_{n=0}^{2N-1}x[n]e^{-j\frac{\pi}{N}kn}
+=\frac{1+(-1)^k}{2N}\sum_{n=0}^{N-1}x[n]e^{-j\frac{\pi}{N}kn}.
+\]
+پس
+\[
+b_k=
+\begin{cases}
+a_{k/2}, & k \ \text{زوج} \ (k=2m)\\
+0, & k \ \text{فرد}.
+\end{cases}
+\]
+
+\subsection*{ب}
+\[
+x[n-1]=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}k(n-1)}
+=\sum_{k=0}^{N-1} a_k e^{-j\frac{2\pi}{N}k}\, e^{j\frac{2\pi}{N}kn}.
+\]
+پس ضرایب سیگنال جدید (مثلاً $b_k$) برابرند با
+\[
+b_k=a_k\Big(1-e^{-j\frac{2\pi}{N}k}\Big).
+\]
+
+\subsection*{پ}
+\[
+x\!\left[n-\frac{N}{2}\right]
+=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}k(n-\frac{N}{2})}
+=\sum_{k=0}^{N-1} a_k e^{-jk\pi}\, e^{j\frac{2\pi}{N}kn}
+=\sum_{k=0}^{N-1} a_k (-1)^k e^{j\frac{2\pi}{N}kn}.
+\]
+بنابراین
+\[
+b_k=a_k\big(1-(-1)^k\big).
+\]
+
+\subsection*{ت}
+\[
+x\!\left[n+\frac{N}{2}\right]
+=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}k(n+\frac{N}{2})}
+=\sum_{k=0}^{N-1} a_k e^{jk\pi}\, e^{j\frac{2\pi}{N}kn}
+=\sum_{k=0}^{N-1} a_k (-1)^k e^{j\frac{2\pi}{N}kn}.
+\]
+پس (در نمایش $N$-تناوب)
+\[
+b_k=a_k\big(1+(-1)^k\big)
+=
+\begin{cases}
+2a_k, & k \ \text{زوج}\\
+0, & k \ \text{فرد}.
+\end{cases}
+\]
+از آن‌جا که فقط هارمونیک‌های زوج باقی می‌مانند، سیگنال حاصل $\,\frac{N}{2}$-تناوب است. اگر ضرایب را برای تناوب $\frac{N}{2}$ برابر $c_m$ بگیریم:
+\[
+x[n]+x\!\left[n+\frac{N}{2}\right]
+=\sum_{m=0}^{\frac{N}{2}-1} c_m\, e^{j\frac{2\pi}{(N/2)}mn}
+=\sum_{m=0}^{\frac{N}{2}-1} c_m\, e^{j\frac{4\pi}{N}mn},
+\]
+که با مقایسه با جمع بالا نتیجه می‌شود
+\[
+c_m = 2a_{2m}, \qquad m=0,1,\dots,\frac{N}{2}-1.
+\]
+
+\subsection*{ث}
+ابتدا
+\[
+x[-n]=\sum_{k=0}^{N-1} a_k e^{-j\frac{2\pi}{N}kn}
+=\sum_{k=0}^{N-1} a_{(-k)\bmod N}\, e^{j\frac{2\pi}{N}kn}.
+\]
+با مزدوج‌گیری:
+\[
+x^{*}[-n]=\sum_{k=0}^{N-1} a_{(-k)\bmod N}^{*}\, e^{j\frac{2\pi}{N}kn}
+\quad\Longrightarrow\quad
+b_k=a_{(-k)\bmod N}^{*}.
+\]
+
+\subsection*{ج}
+می‌نویسیم
+\[
+y[n]=x[n]\;p[n],
+\qquad
+p[n]=
+\begin{cases}
+1,& n \ \text{زوج}\\
+0,& n \ \text{فرد}
+\end{cases}
+=\frac{1+(-1)^n}{2}.
+\]
+اگر $N$ زوج باشد، $p[n]$ نیز $N$-تناوب است و
+\[
+p[n]=\frac{1}{2}+\frac{1}{2}e^{j\pi n}
+=\frac{1}{2}+\frac{1}{2}e^{j\frac{2\pi}{N}\frac{N}{2}n}
+\;\Longrightarrow\;
+p_0=\frac12,\;\; p_{N/2}=\frac12,\;\; \text{سایر } p_k=0.
+\]
+چون ضرب در زمان $\Rightarrow$ کانولوشن دوری ضرایب،
+\[
+b_k=\sum_{m=0}^{N-1} a_m\, p_{(k-m)\bmod N}
+=\frac12 a_k+\frac12 a_{(k-\frac{N}{2})\bmod N},
+\qquad k=0,1,\dots,N-1.
+\]
+(اگر $N$ فرد باشد، $p[n]$ با تناوب $N$ سازگار نیست و $y[n]$ عملاً تناوب $2N$ خواهد داشت.)

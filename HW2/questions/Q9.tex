@@ -1,0 +1,35 @@
+فرض کنید $x[n]$ با دوره‌ی $N$ باشد و نمایش سری فوریه‌ی گسسته‌ی آن به صورت
+\[
+x[n]=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}kn}
+\]
+باشد. چون $N$ بر $m$ بخش‌پذیر است، می‌نویسیم
+\[
+N=mL \qquad (L=\tfrac{N}{m}).
+\]
+طبق شرط مسئله برای هر $n$ داریم:
+\begin{flalign*}
+0
+&=\sum_{r=0}^{L-1} x[n+rL] \\
+&=\sum_{r=0}^{L-1}\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}k(n+rL)} \\
+&=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}kn}\sum_{r=0}^{L-1} e^{j\frac{2\pi}{N}krL} \\
+&=\sum_{k=0}^{N-1} a_k e^{j\frac{2\pi}{N}kn}\underbrace{\sum_{r=0}^{L-1} e^{j\frac{2\pi}{m}kr}}_{C_k}.
+&&
+\end{flalign*}
+حال دو طرف را در $e^{-j\frac{2\pi}{N}\ell n}$ ضرب کرده و روی یک دوره جمع می‌زنیم:
+\begin{flalign*}
+0
+&=\sum_{n=0}^{N-1}\sum_{k=0}^{N-1} a_k C_k e^{j\frac{2\pi}{N}(k-\ell)n}
+=\sum_{k=0}^{N-1} a_k C_k \, N\,\delta[k-\ell]
+= N a_\ell C_\ell,
+&&
+\end{flalign*}
+پس برای هر $\ell$ داریم $a_\ell C_\ell=0$. اگر $\ell$ بر $m$ بخش‌پذیر باشد، آنگاه
+\[
+e^{j\frac{2\pi}{m}\ell}=1 \;\;\Longrightarrow\;\;
+C_\ell=\sum_{r=0}^{L-1} 1 = L=\frac{N}{m}\neq 0
+\]
+و در نتیجه
+\[
+a_\ell=0.
+\]
+پس برای هر $k$ که بر $m$ بخش‌پذیر باشد، $a_k=0$.

@@ -1,0 +1,52 @@
+\subsection*{الف}
+می‌دانیم بسط نمایی سری فوریه به‌صورت
+$$x(t)=\sum_{k=-\infty}^{+\infty} a_k e^{jk\omega_0 t}, \qquad \omega_0=\frac{2\pi}{T}=\frac{\pi}{2}$$
+است. بنابراین:
+\begin{flalign*}
+\sum_{k=-\infty}^{+\infty} j^k a_k
+&=\sum_{k=-\infty}^{+\infty} a_k e^{jk\frac{\pi}{2}}
+=\sum_{k=-\infty}^{+\infty} a_k e^{jk\omega_0(1)}
+= x(1) \\
+x(1) &= 1-\frac{1^2}{2}=\frac{1}{2}
+\;\;\Longrightarrow\;\;
+\sum_{k=-\infty}^{+\infty} j^k a_k=\frac{1}{2} &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+\sum_{k=-\infty}^{+\infty} (-1)^k a_k
+&=\sum_{k=-\infty}^{+\infty} a_k e^{jk\pi}
+=\sum_{k=-\infty}^{+\infty} a_k e^{jk\omega_0(2)}
+= x(2) \\
+x(2) &= 1-\frac{2^2}{2}=-1
+\;\;\Longrightarrow\;\;
+\sum_{k=-\infty}^{+\infty} (-1)^k a_k=-1 &&
+\end{flalign*}
+
+\subsection*{ج}
+طبق رابطه‌ی \lr{Parseval} برای سری فوریه نمایی:
+\begin{flalign*}
+\sum_{k=-\infty}^{+\infty} |a_k|^2
+&=\frac{1}{T}\int_{t_0}^{t_0+T} |x(t)|^2\,dt
+=\frac{1}{4}\int_{-2}^{2}\left(1-\frac{t^2}{2}\right)^2 dt \\
+&=\frac{1}{4}\int_{-2}^{2}\left(1-t^2+\frac{t^4}{4}\right) dt
+=\frac{1}{4}\left(\frac{28}{15}\right)
+=\frac{7}{15} &&
+\end{flalign*}
+
+\subsection*{د}
+بگذارید
+$$S_{\text{even}}=\sum_{k=-\infty}^{+\infty} a_{2k}, \qquad S_{\text{odd}}=\sum_{k=-\infty}^{+\infty} a_{2k+1}.$$
+از طرفی:
+\begin{flalign*}
+x(0)&=\sum_{k=-\infty}^{+\infty} a_k = S_{\text{even}}+S_{\text{odd}} \\
+x(2)&=\sum_{k=-\infty}^{+\infty} (-1)^k a_k = S_{\text{even}}-S_{\text{odd}}
+\end{flalign*}
+پس:
+\begin{flalign*}
+S_{\text{even}}=\frac{x(0)+x(2)}{2}
+=\frac{\left(1-\frac{0^2}{2}\right)+\left(1-\frac{2^2}{2}\right)}{2}
+=\frac{1+(-1)}{2}=0
+\;\;\Longrightarrow\;\;
+\sum_{k=-\infty}^{+\infty} a_{2k}=0 &&
+\end{flalign*}

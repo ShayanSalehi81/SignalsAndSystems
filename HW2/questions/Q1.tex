@@ -1,0 +1,63 @@
+\subsection*{الف}
+فرض کنید
+$\omega_0=\frac{2\pi}{T}$.
+این سیگنال را به صورت
+$x(t)=-2+3p(t)$
+می‌نویسیم که در آن
+$p(t)$
+یک پالس مربعی متناوب با دوره $T$ است و
+\[
+p(t)=
+\begin{cases}
+1 & 0\le t<t_1,\\
+0 & t_1\le t<T.
+\end{cases}
+\]
+پس ضرایب سری فوریه مختلط:
+\[
+c_n = -2\,\delta[n] + 3\,P_n,
+\qquad
+P_n=\frac{1}{T}\int_0^{t_1} e^{-jn\omega_0 t}\,dt.
+\]
+برای $n=0$:
+\[
+c_0=\frac{1}{T}\int_0^T x(t)\,dt=\frac{t_1-2(T-t_1)}{T}=\frac{3t_1}{T}-2.
+\]
+برای $n\neq 0$:
+\begin{flalign*}
+c_n
+&=\frac{1}{T}\left(\int_0^{t_1} e^{-jn\omega_0 t}\,dt-2\int_{t_1}^{T} e^{-jn\omega_0 t}\,dt\right) \\
+&=\frac{3}{j2\pi n}\left(1-e^{-jn\frac{2\pi}{T}t_1}\right)
+=\frac{3}{\pi n}\,e^{-jn\pi\frac{t_1}{T}}\,\sin\!\left(n\pi\frac{t_1}{T}\right). &&
+\end{flalign*}
+
+\subsection*{ب}
+اگر
+$x_e(t)=\frac{x(t)+x(-t)}{2}$ و $x_o(t)=\frac{x(t)-x(-t)}{2}$،
+آنگاه ضرایب سری فوریه مختلط آن‌ها:
+\[
+c_n^{(e)}=\frac{c_n+c_{-n}}{2},\qquad
+c_n^{(o)}=\frac{c_n-c_{-n}}{2}.
+\]
+چون $x(t)$ حقیقی است، $c_{-n}=c_n^*$.
+پس:
+\[
+c_0^{(e)}=c_0=\frac{3t_1}{T}-2,\qquad c_0^{(o)}=0,
+\]
+و برای $n\neq 0$:
+\begin{flalign*}
+c_n^{(e)}&=\Re\{c_n\}
+=\frac{3}{2\pi n}\sin\!\left(2\pi n\frac{t_1}{T}\right),\\
+c_n^{(o)}&=j\,\Im\{c_n\}
+=-j\,\frac{3}{\pi n}\sin^2\!\left(n\pi\frac{t_1}{T}\right). &&
+\end{flalign*}
+
+\subsection*{ج}
+طبق رابطه \lr{Parseval} برای سری فوریه مختلط:
+\[
+\sum_{n=-\infty}^{\infty}|c_n|^2=\frac{1}{T}\int_0^T |x(t)|^2\,dt
+=\frac{1}{T}\left(\int_0^{t_1}1\,dt+\int_{t_1}^{T}4\,dt\right)
+=4-\frac{3t_1}{T}.
+\]
+(همچنین $|c_n|^2=\frac{9}{\pi^2 n^2}\sin^2(n\pi\frac{t_1}{T})$ برای $n\neq 0$ و
+$|c_0|^2=(\frac{3t_1}{T}-2)^2$.)

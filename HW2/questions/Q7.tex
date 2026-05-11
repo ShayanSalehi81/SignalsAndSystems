@@ -1,0 +1,34 @@
+برای بلوک اول (سیستم \lr{LTI}) داریم
+$$w[n]=x[n]*h[n],\qquad h[n]\;\overset{\text{DTFT}}{\longleftrightarrow}\;H(\Omega)$$
+و مطابق شکل:
+$$
+H(\Omega)=
+\begin{cases}
+1 & |\Omega|\le \frac{\pi}{2}\quad (\mathrm{mod}\ 2\pi)\\
+0 & \text{سایر }
+\end{cases}
+$$
+پس با خطی بودن،
+$$x[n]=\delta[n]+1 \;\;\Longrightarrow\;\; w[n]=h[n]+1.$$
+
+در بخش دوم دیاگرام:
+$$y[n]=w[n]+(-1)^n w[n].$$
+خروجی را به دو مؤلفه تجزیه می‌کنیم.
+
+\begin{itemize}
+\item مؤلفه‌ی ناشی از $\delta[n]$: \quad $w_\delta[n]=h[n]$ و
+با خاصیت مدولاسیون $(-1)^n=e^{j\pi n}$ خواهیم داشت
+$$(-1)^n h[n]\;\overset{e^{j\pi n}}{\longleftrightarrow}\;H(\Omega-\pi)$$
+پس
+$$Y_\delta(\Omega)=H(\Omega)+H(\Omega-\pi).$$
+از آنجا که $H(\Omega)$ روی $[-\frac{\pi}{2},\frac{\pi}{2}]$ برابر ۱ است و شیفت $\pi$ آن بازه‌ی مکمل (در یک دوره) را پوشش می‌دهد، داریم
+$$H(\Omega)+H(\Omega-\pi)=1 \quad \Longrightarrow\quad y_\delta[n]=\delta[n].$$
+
+\item مؤلفه‌ی ناشی از ورودی ثابت $1$: \quad چون $H(0)=1$، خروجیِ بلوک اول برای ورودی DC برابر $w_1[n]=1$ است، لذا
+$$y_1[n]=1+(-1)^n.$$
+\end{itemize}
+
+در نتیجه خروجی کل:
+$$
+y[n]=y_\delta[n]+y_1[n]=\delta[n]+1+(-1)^n.
+$$

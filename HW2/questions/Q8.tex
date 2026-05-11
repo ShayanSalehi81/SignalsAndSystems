@@ -1,0 +1,30 @@
+با گرفتن \lr{$Z$-transform} (با فرض شرایط اولیهٔ صفر) از دو معادله داریم:
+\begin{flalign*}
+\left(1+\frac{1}{4}z^{-1}\right)Y(z)+\left(1+\frac{1}{2}z^{-1}\right)W(z) &= \frac{2}{3}X(z) \\
+\left(1-\frac{5}{4}z^{-1}\right)Y(z)+\left(2-2z^{-1}\right)W(z) &= -\frac{5}{3}X(z)
+\end{flalign*}
+با حذف $W(z)$:
+\begin{flalign*}
+H(z)=\frac{Y(z)}{X(z)}
+&=\frac{\frac{2}{3}(2-2z^{-1})-\left(-\frac{5}{3}\right)\left(1+\frac{1}{2}z^{-1}\right)}
+{\left(1+\frac{1}{4}z^{-1}\right)(2-2z^{-1})-\left(1-\frac{5}{4}z^{-1}\right)\left(1+\frac{1}{2}z^{-1}\right)} \\
+&=\frac{3-\frac{1}{2}z^{-1}}{1-\frac{3}{4}z^{-1}+\frac{1}{8}z^{-2}}
+=\frac{3-\frac{1}{2}z^{-1}}{\left(1-\frac{1}{2}z^{-1}\right)\left(1-\frac{1}{4}z^{-1}\right)}
+\end{flalign*}
+تجزیه به کسرهای جزئی:
+\begin{flalign*}
+H(z)=\frac{4}{1-\frac{1}{2}z^{-1}}-\frac{1}{1-\frac{1}{4}z^{-1}}
+\end{flalign*}
+
+پس پاسخ فرکانسی:
+\begin{flalign*}
+H(e^{j\omega})
+=H(z)\big|_{z=e^{j\omega}}
+=\frac{3-\frac{1}{2}e^{-j\omega}}{1-\frac{3}{4}e^{-j\omega}+\frac{1}{8}e^{-j2\omega}}
+= \frac{4}{1-\frac{1}{2}e^{-j\omega}}-\frac{1}{1-\frac{1}{4}e^{-j\omega}}
+\end{flalign*}
+
+و چون سیستم علی است (ROC: $|z|>\frac{1}{2}$)، پاسخ به ضربهٔ واحد:
+\begin{flalign*}
+h[n]=4\left(\frac{1}{2}\right)^n u[n]-\left(\frac{1}{4}\right)^n u[n]
+\end{flalign*}
