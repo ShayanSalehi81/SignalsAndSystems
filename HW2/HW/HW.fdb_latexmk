@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1778491253.93754 "HW.xdv" "HW.pdf" "HW" 1778491254.33552 0
-  "HW.xdv" 1778491253 87984 1a3eecb322049cb26caf066ddbccd331 "xelatex"
+["xdvipdfmx"] 1778493438.10659 "HW.xdv" "HW.pdf" "HW" 1778493438.4688 0
+  "HW.xdv" 1778493437 69048 ca78cd00d10ed3feb4cef093c6a65136 "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1778491252.03863 "d:/Term 02/SignalsAndSystems/HW2/HW/HW.tex" "HW.xdv" "HW" 1778491254.32839 0
+["xelatex"] 1778493436.2536 "d:/Term 02/SignalsAndSystems/HW2/HW/HW.tex" "HW.xdv" "HW" 1778493438.46104 2
   "../commons/alg-fa.tex" 1707886330 1438 630aaa81895929eddba0efb6ab754a8c ""
   "../commons/sharif.png" 1707886330 34782 91c831e22cd5b8b30cdd0d7fa2b74a71 ""
   "../commons/style.tex" 1777315563 5426 c5264eab9c8a1e3be829e7c41fa1c683 ""
@@ -14,9 +14,6 @@
   "../questions/Q4.tex" 1778490128 3534 9cee99c65a5c721a632a53207d3381a6 ""
   "../questions/Q5.tex" 1778489950 1802 80e2dc010bfbd06d9471e3b3870bb0ac ""
   "../questions/Q6.tex" 1778490001 1692 9c00a905cff2268a40f3266f1e849d4f ""
-  "../questions/Q7.tex" 1778491170 1405 bf61f426f3ad246cb525b39e1a1de3d2 ""
-  "../questions/Q8.tex" 1778491199 1397 8bcb80cfd8bbfb7944faa1da45e766e4 ""
-  "../questions/Q9.tex" 1778491251 1338 3f65c0852badb66fbfb5eb4f5638b6f1 ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136759654 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -234,10 +231,10 @@
   "C:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "C:/Program Files/MiKTeX/tex/xelatex/xetex-pstricks/pstricks.con" 1266284760 204 366747485ba2670f55166e66d1f21249 ""
   "C:/Users/ROG/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1762519379 27033816 3409389256dddeec52c4569a0d18311e ""
-  "HW.aux" 1778491253 164 f9ac59812572cc8a959968871c105342 "xelatex"
-  "HW.out" 1778491253 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1778489993 824 7bda449ca5a265df784214c67bbdc697 ""
-  "d:/Term 02/SignalsAndSystems/HW2/HW/HW.tex" 1778489993 824 7bda449ca5a265df784214c67bbdc697 ""
+  "HW.aux" 1778493437 139 cd2d7234791dd473054f962fade73d34 "xelatex"
+  "HW.out" 1778493437 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1778493431 823 18668a0c3837c2d1057d2176c71323a6 ""
+  "d:/Term 02/SignalsAndSystems/HW2/HW/HW.tex" 1778493431 823 18668a0c3837c2d1057d2176c71323a6 ""
   (generated)
   "HW.aux"
   "HW.log"
