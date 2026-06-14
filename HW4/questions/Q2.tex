@@ -1,0 +1,39 @@
+\subsection*{الف}
+طیف ورودی مثلثی است با پهنای $\frac{7\pi}{2}$:
+\begin{flalign*}
+    X_a(\omega) = \Lambda\!\left(\frac{\omega}{7\pi/2}\right), \qquad X_a(\omega) = 0 \;\; \text{برای}\;\; |\omega| > \tfrac{7\pi}{2} &&
+\end{flalign*}
+
+ضرب در $\cos(7\pi t)$، طیف را با ضریب $\frac12$ به $\pm 7\pi$ منتقل می‌کند:
+\begin{flalign*}
+    X_b(\omega) &= \tfrac{1}{2}\big[X_a(\omega-7\pi) + X_a(\omega+7\pi)\big] &&
+\end{flalign*}
+دو مثلث حول $\pm 7\pi$ با ارتفاع $\frac12$ و گستره $\big[7\pi-\tfrac{7\pi}{2},\,7\pi+\tfrac{7\pi}{2}\big]=\big[\tfrac{7\pi}{2},\tfrac{21\pi}{2}\big]$.
+
+با $T=1$، نمونه‌برداری طیف را با دوره $\omega_s=\frac{2\pi}{T}=2\pi$ متناوب می‌کند (و $K=1$ بدون تغییر مقیاس):
+\begin{flalign*}
+    X_c(e^{j\omega}) &= \frac{1}{T}\sum_{k=-\infty}^{\infty} X_b(\omega - 2\pi k) = \sum_{k=-\infty}^{\infty} X_b(\omega - 2\pi k) &&
+\end{flalign*}
+مرکز مثلف $7\pi$ به‌پیمانهٔ $2\pi$ معادل $7\pi-6\pi=\pi$ (و $-7\pi\equiv -\pi$) است؛ پس مثلث‌ها حول $\pm\pi$ مستقر می‌شوند. اما نیم‌پهنای هر مثلث $\frac{7\pi}{2}>\pi$ است، لذا نسخه‌های جابه‌جاشده هم‌پوشانی (\lr{aliasing}) دارند و طیف بازهٔ $[-\pi,\pi]$ کاملاً پُر و درهم می‌شود.
+
+فیلتر بازیابی فیلتر پایین‌گذر ایده‌آل با فرکانس قطع $\frac{\pi}{T}=\pi$ و بهرهٔ $T=1$ است:
+\begin{flalign*}
+    H(\omega) = T\,\Pi\!\left(\frac{\omega}{2\pi/T}\right) = \Pi\!\left(\frac{\omega}{2\pi}\right) =
+    \begin{cases}
+        1 & |\omega| < \pi \\
+        0 & |\omega| > \pi
+    \end{cases} &&
+\end{flalign*}
+بنابراین $X_f(\omega)$ همان بخش $X_c$ روی $[-\pi,\pi]$ است: حاصل برهم‌نهی دو دنبالهٔ مثلث آلیاس‌شده — یک طیف مخدوش، نه یک مثلث تمیز.
+
+\subsection*{ب}
+شرط $x_f(t)=x_a(t)$ یعنی پس از کل زنجیره باید طیف اصلی $X_a$ روی $|\omega|<\frac{7\pi}{2}$ بازسازی شود. دو مانع بنیادی وجود دارد:
+\begin{flalign*}
+    &\text{(۱)}\;\; \text{مدولاسیون } \cos(7\pi t) \text{ طیف را به } \pm 7\pi \text{ می‌برد؛ هیچ } H \text{ پایین‌گذری آن را به پایه بازنمی‌گرداند.} \\
+    &\text{(۲)}\;\; \text{برای جلوگیری از } \text{\lr{aliasing}} \text{ باید } \omega_s = \tfrac{2\pi}{T} \geq 2\cdot\Big(7\pi+\tfrac{7\pi}{2}\Big)=21\pi &&
+\end{flalign*}
+حتی با نرخ کافی، خروجی نسخهٔ مدوله‌شدهٔ $x_a$ است نه خودِ $x_a$؛ بازیافت بدون دی‌مدولاسیون ناممکن است. از این رو:
+\begin{flalign*}
+    \;\text{با هیچ مقدار مثبت } K,T \;\; x_f(t)=x_a(t) \text{ برقرار نمی‌شود.}\; &&
+\end{flalign*}
+دلیل: شیفت طیفی ناشی از $\cos(7\pi t)$ توسط بلوک‌های نمونه‌برداری/پایین‌گذر برگشت‌پذیر نیست، و انتخاب $T$ تنها میان آلیاسینگ (برای $T$ بزرگ) و عبور نسخهٔ مدوله‌شده (برای $T$ کوچک) جابه‌جا می‌کند؛ در هیچ‌کدام طیف مثلثی پایه عیناً بازتولید نمی‌گردد.

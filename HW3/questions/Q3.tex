@@ -1,0 +1,34 @@
+\subsection*{الف}
+با قرارداد تبدیل فوریه
+$$X(j\omega)=\int_{-\infty}^{\infty}x(t)e^{-j\omega t}\,dt,\qquad
+x(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t}\,d\omega$$
+داریم:
+\begin{flalign*}
+x(t)&=\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{-\frac{\omega^2}{2}}e^{j\omega t}\,d\omega
+=\frac{1}{2\pi}\int_{-\infty}^{\infty} \exp\!\left(-\frac{1}{2}(\omega-jt)^2-\frac{t^2}{2}\right)\,d\omega &&\\
+&=\frac{e^{-t^2/2}}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{1}{2}(\omega-jt)^2}\,d\omega
+=\frac{e^{-t^2/2}}{2\pi}\sqrt{2\pi}
+=\frac{1}{\sqrt{2\pi}}e^{-t^2/2}. &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+|X(j\omega)|^2=e^{-\omega^2},\qquad 
+|X(0)|^2=1. &&
+\end{flalign*}
+شرط افت به $\frac{1}{e}$:
+\begin{flalign*}
+e^{-\omega^2}=\frac{1}{e}\;\Rightarrow\;\omega^2=1\;\Rightarrow\;B=1~\text{rad/s}. &&
+\end{flalign*}
+
+\subsection*{ج}
+\begin{flalign*}
+|x(t)|^2=\frac{1}{2\pi}e^{-t^2},\qquad 
+|x(0)|^2=\frac{1}{2\pi}. &&
+\end{flalign*}
+شرط افت به $\frac{1}{e}$:
+\begin{flalign*}
+\frac{1}{2\pi}e^{-t^2}=\frac{1}{e}\cdot\frac{1}{2\pi}\;\Rightarrow\;t^2=1\;\Rightarrow\;T=1~\text{s}. &&
+\end{flalign*}
+پس:
+$$BT=1.$$

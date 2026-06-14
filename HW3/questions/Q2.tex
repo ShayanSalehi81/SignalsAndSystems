@@ -1,0 +1,33 @@
+\subsection*{الف}
+با فرض شرایط اولیه صفر و سامانه \lr{LTI}، تابع انتقال:
+\begin{flalign*}
+H(s)=\frac{Y(s)}{X(s)}=\frac{b}{s+a} \quad \Longrightarrow \quad h(t)=\mathcal{L}^{-1}\{H(s)\}=b\,e^{-a t}\,u(t) &&
+\end{flalign*}
+
+\subsection*{ب}
+پاسخ فرکانسی:
+\begin{flalign*}
+H(j\omega)=\frac{b}{a+j\omega} &&
+\end{flalign*}
+\begin{flalign*}
+|H(j\omega)|=\frac{b}{\sqrt{a^2+\omega^2}}, \qquad \angle H(j\omega)=-\tan^{-1}\!\left(\frac{\omega}{a}\right) &&
+\end{flalign*}
+
+\subsection*{ج}
+برای ورودی پله $x(t)=u(t)$:
+\begin{flalign*}
+y(t)=h(t)*u(t)=\frac{b}{a}\left(1-e^{-a t}\right)u(t) &&
+\end{flalign*}
+\begin{flalign*}
+\lim_{t\to\infty} y(t)=\frac{b}{a} &&
+\end{flalign*}
+
+\subsection*{د}
+برای مدار \lr{RC} با خروجی روی خازن:
+\begin{flalign*}
+RC\,\frac{dy}{dt}+y=x \quad \Longrightarrow \quad \frac{dy}{dt}+\frac{1}{RC}y=\frac{1}{RC}x &&
+\end{flalign*}
+پس:
+\begin{flalign*}
+a=\frac{1}{RC}, \qquad b=\frac{1}{RC} &&
+\end{flalign*}

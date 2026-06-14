@@ -1,0 +1,38 @@
+\subsection*{الف}
+با تعريف $\omega_0 = \frac{2\pi}{T}$، ضرايب سري فوريه $p(t)$ برابرند با
+\begin{flalign*}
+c_k &= \frac{1}{T}\int_{-T/4}^{T/4} e^{-j k \omega_0 t}\,dt
+     = \frac{\sin\left(\frac{k\pi}{2}\right)}{\pi k}\quad (k\neq 0), \\
+c_0 &= \frac{1}{T}\int_{-T/4}^{T/4} 1\,dt = \frac{1}{2}. &&
+\end{flalign*}
+پس
+\begin{flalign*}
+p(t) &= \sum_{k=-\infty}^{\infty} c_k e^{j k \omega_0 t}, \\
+P(j\omega) &= 2\pi \sum_{k=-\infty}^{\infty} c_k\,\delta(\omega-k\omega_0). &&
+\end{flalign*}
+
+\subsection*{ب}
+براي سيستم \lr{LTI} با $H(j\omega)=\frac{j\omega}{j\omega+1}$، ضرايب خروجي
+\begin{flalign*}
+d_k = H(jk\omega_0)\,c_k =
+\frac{j k \omega_0}{j k \omega_0 + 1}\,c_k,
+\quad d_0=0. &&
+\end{flalign*}
+پس سري فوريه جديد خروجي:
+\begin{flalign*}
+y(t) = \sum_{k\neq 0}
+\frac{j k \omega_0}{j k \omega_0 + 1}\,
+\frac{\sin\left(\frac{k\pi}{2}\right)}{\pi k}\,
+e^{j k \omega_0 t}. &&
+\end{flalign*}
+
+\subsection*{ج}
+توان متوسط خروجي با رابطه پارسوال براي سيگنال متناوب:
+\begin{flalign*}
+P_y &= \sum_{k=-\infty}^{\infty} |d_k|^2
+= 2\sum_{k=1}^{\infty} |H(jk\omega_0)|^2 |c_k|^2 \\
+&= \frac{2\omega_0^2}{\pi^2}\sum_{k=1}^{\infty}
+\frac{\sin^2\left(\frac{k\pi}{2}\right)}{1+k^2\omega_0^2}
+= \frac{2\omega_0^2}{\pi^2}\sum_{m=0}^{\infty}
+\frac{1}{1+(2m+1)^2\omega_0^2}. &&
+\end{flalign*}

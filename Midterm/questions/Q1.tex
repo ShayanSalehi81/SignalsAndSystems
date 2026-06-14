@@ -1,0 +1,50 @@
+سیگنال نشان‌داده‌شده نیم‌دایرهٔ بالایی به مرکز $t=1$ و شعاع ۱ است؛ یعنی $x(t)=\sqrt{1-(t-1)^2}$ روی $0\le t\le 2$. حل زیر بر همین پایه نوشته شده است:
+
+\subsection*{$X(0)$}
+\begin{flalign*}
+    X(0)=\int_{-\infty}^{+\infty}x(t)\,dt=\tfrac{1}{2}\pi r^{2}=\frac{\pi}{2} &&
+\end{flalign*}
+
+\subsection*{$\int_{-\infty}^{+\infty}X(\omega)\,d\omega$}
+از رابطهٔ تبدیل عکس در $t=0$، یعنی $x(0)=\frac{1}{2\pi}\int X(\omega)\,d\omega$:
+\begin{flalign*}
+    \int_{-\infty}^{+\infty}X(\omega)\,d\omega=2\pi\,x(0)=0 &&
+\end{flalign*}
+
+\subsection*{$\int_{-\infty}^{+\infty}\omega X(\omega)\,d\omega$}
+با خاصیت مشتق $x'(t)\longleftrightarrow j\omega X(\omega)$ و ارزیابی تبدیل عکس آن در $t=0$:
+\begin{flalign*}
+    \int_{-\infty}^{+\infty}\omega X(\omega)\,d\omega &= \frac{2\pi}{j}\,x'(0)=-2\pi j\,x'(0) \\
+    x'(t) &= \frac{1-t}{\sqrt{1-(t-1)^{2}}}\;\Longrightarrow\;x'(0^{+})=+\infty &&
+\end{flalign*}
+به‌سبب مماس قائم سیگنال در مبدأ، $x'(0)$ نامتناهی است و این انتگرال واگرا می‌شود.
+
+\subsection*{$\angle X(\omega)$}
+چون $x(t)=x(2-t)$، سیگنال حول $t=1$ زوج است؛ با تعریف $x_e(t)=\sqrt{1-t^{2}}$ (حقیقی و زوج) داریم $x(t)=x_e(t-1)$، پس:
+\begin{flalign*}
+    X(\omega)=e^{-j\omega}\,X_e(\omega),\qquad X_e(\omega)=\frac{\pi J_1(\omega)}{\omega}\in\mathbb{R} &&
+\end{flalign*}
+فاز تنها از عامل جابه‌جایی و علامت $X_e(\omega)$ می‌آید:
+\begin{flalign*}
+    \angle X(\omega)=
+    \begin{cases}
+        -\omega & X_e(\omega)>0\\[4pt]
+        -\omega\pm\pi & X_e(\omega)<0
+    \end{cases} &&
+\end{flalign*}
+
+\subsection*{$\int_{-\infty}^{+\infty}X^{2}(\omega)\,d\omega$}
+چون $X^{2}(\omega)=X(\omega)X(\omega)$ تبدیل فوریهٔ $g(t)=(x*x)(t)$ است، با ارزیابی تبدیل عکس آن در $t=0$:
+\begin{flalign*}
+    \int_{-\infty}^{+\infty}X^{2}(\omega)\,d\omega &= 2\pi\,(x*x)(0)=2\pi\!\int_{-\infty}^{+\infty}\!x(\tau)\,x(-\tau)\,d\tau=0 &&
+\end{flalign*}
+تکیه‌گاه‌های $x(\tau)$ روی $[0,2]$ و $x(-\tau)$ روی $[-2,0]$ تنها در $\tau=0$ (با اندازهٔ صفر) اشتراک دارند.
+
+\subsection*{$\int_{-\infty}^{+\infty}|X(\omega)|^{2}\,d\omega$}
+این حالت قضیهٔ پارسوال است و برخلاف $\int X^{2}\,d\omega$ صفر نمی‌شود:
+\begin{flalign*}
+    \int_{-\infty}^{+\infty}|X(\omega)|^{2}\,d\omega &= 2\pi\!\int_{-\infty}^{+\infty}\!|x(t)|^{2}\,dt
+    =2\pi\!\int_{0}^{2}\!\bigl(1-(t-1)^{2}\bigr)\,dt \\
+    &= 2\pi\!\int_{-1}^{1}\!(1-u^{2})\,du
+    =2\pi\cdot\frac{4}{3}=\frac{8\pi}{3} &&
+\end{flalign*}

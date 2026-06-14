@@ -1,0 +1,56 @@
+\subsection*{۱}
+برای \lr{upsampler}،
+خروجی فقط در نمونه‌های مضرب $L$ غیرصفر است:
+\begin{flalign*}
+    G(e^{j\omega}) &= \sum_{n} g[n] e^{-j\omega n}
+    = \sum_{m} s[m] e^{-j\omega m L}
+    = S(e^{j\omega L}) &&
+\end{flalign*}
+طیف $S$ با ضریب $L$ فشرده می‌شود و $L$ نسخهٔ تکراری در بازهٔ $[0, 2\pi)$ پدید می‌آید. این تکرارها همواره از هم جدا هستند، پس \lr{upsampling} به‌تنهایی اعوجاج ایجاد نمی‌کند؛ شرطی لازم نیست.
+
+برای \lr{downsampler}:
+\begin{flalign*}
+    G(e^{j\omega}) &= \sum_{n} s[nM] e^{-j\omega n}
+    = \frac{1}{M} \sum_{k=0}^{M-1} S\!\left(e^{j(\omega - 2\pi k)/M}\right) &&
+\end{flalign*}
+طیف با ضریب $M$ کشیده و $M$ نسخهٔ آن جمع می‌شود. برای جلوگیری از \lr{aliasing}، باید ورودی محدودباند باشد:
+\begin{flalign*}
+    S(e^{j\omega}) = 0 \quad \text{برای} \quad \frac{\pi}{M} \leq |\omega| \leq \pi &&
+\end{flalign*}
+
+\subsection*{۲}
+در (a) ابتدا \lr{downsample} سپس فیلتر $H(z)$:
+\begin{flalign*}
+    X_a(e^{j\omega}) &= \frac{1}{M} \sum_{k=0}^{M-1} X\!\left(e^{j(\omega - 2\pi k)/M}\right) \\
+    Y_a(e^{j\omega}) &= H(e^{j\omega})\, X_a(e^{j\omega})
+    = \frac{1}{M} H(e^{j\omega}) \sum_{k=0}^{M-1} X\!\left(e^{j(\omega - 2\pi k)/M}\right) &&
+\end{flalign*}
+در (b) ابتدا فیلتر $H(z^M)$ سپس \lr{downsample}. خروجی فیلتر $X_b(e^{j\omega}) = H(e^{j\omega M}) X(e^{j\omega})$، و پس از کاهش نمونه:
+\begin{flalign*}
+    Y_b(e^{j\omega}) &= \frac{1}{M} \sum_{k=0}^{M-1}
+    H\!\left(e^{j M (\omega - 2\pi k)/M}\right) X\!\left(e^{j(\omega - 2\pi k)/M}\right) \\
+    &= \frac{1}{M} \sum_{k=0}^{M-1}
+    H\!\left(e^{j(\omega - 2\pi k)}\right) X\!\left(e^{j(\omega - 2\pi k)/M}\right) &&
+\end{flalign*}
+چون $H$ با دورهٔ $2\pi$ متناوب است، $H(e^{j(\omega - 2\pi k)}) = H(e^{j\omega})$ مستقل از $k$ بوده و از مجموع بیرون می‌آید:
+\begin{flalign*}
+    Y_b(e^{j\omega}) &= \frac{1}{M} H(e^{j\omega}) \sum_{k=0}^{M-1}
+    X\!\left(e^{j(\omega - 2\pi k)/M}\right) = Y_a(e^{j\omega}) &&
+\end{flalign*}
+
+\subsection*{۳}
+در دامنهٔ $z$، \lr{upsampling} معادل جایگزینی $z \to z^L$ در طیف ورودی است:
+\begin{flalign*}
+    X[z] \xrightarrow{\uparrow L} X(z^L) &&
+\end{flalign*}
+در (a) ابتدا فیلتر سپس \lr{upsample}:
+\begin{flalign*}
+    X_a(z) &= H(z) X(z) \\
+    Y_a(z) &= X_a(z^L) = H(z^L)\, X(z^L) &&
+\end{flalign*}
+در (b) ابتدا \lr{upsample} سپس فیلتر $H(z^L)$:
+\begin{flalign*}
+    X_b(z) &= X(z^L) \\
+    Y_b(z) &= H(z^L)\, X_b(z) = H(z^L)\, X(z^L) = Y_a(z) &&
+\end{flalign*}
+بنابراین دو سیستم هم‌ارزند.

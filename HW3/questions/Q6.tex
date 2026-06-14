@@ -1,0 +1,56 @@
+\subsection*{الف}
+با استفاده از نتیجهٔ قطار ضربهٔ دوره‌ای داریم:
+\begin{flalign*}
+p(t)=\sum_{n=-\infty}^{\infty}\delta(t-nT)
+\quad \Longleftrightarrow \quad
+P(j\omega)=\frac{2\pi}{T}\sum_{k=-\infty}^{\infty}\delta(\omega-k\omega_s),
+\qquad
+\omega_s=\frac{2\pi}{T}
+&&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+X_p(j\omega)=\frac{1}{2\pi}X(j\omega)*P(j\omega)
+=\frac{1}{T}\sum_{k=-\infty}^{\infty}X\big(j(\omega-k\omega_s)\big)
+&&
+\end{flalign*}
+
+\subsection*{ج}
+با $T=\frac{1}{300}$ داریم $\omega_s=600\pi$ و چون $200\pi<\omega_s/2=300\pi$ تداخل طیفی نداریم. پس:
+\begin{flalign*}
+Y(j\omega)=
+\begin{cases}
+\frac{1}{T}X(j\omega), & |\omega|\le 200\pi\\
+0, & \text{در غیر این صورت}
+\end{cases}
+\Longrightarrow
+y(t)=\frac{1}{T}x(t)=300\,x(t)
+&&
+\end{flalign*}
+
+\subsection*{د}
+در این حالت $T=\frac{1}{100}$ و $\omega_s=200\pi$ است. برای
+$x(t)=\cos(150\pi t)+\cos(300\pi t)$ داریم:
+\begin{flalign*}
+X(j\omega)=\pi\big(\delta(\omega-150\pi)+\delta(\omega+150\pi)
++\delta(\omega-300\pi)+\delta(\omega+300\pi)\big)
+&&
+\end{flalign*}
+پس بعد از نمونه‌برداری و فیلتر پایین‌گذر با $\omega_c=300\pi$:
+\begin{flalign*}
+Y(j\omega)&=\frac{\pi}{T}\big(
+\delta(\omega-50\pi)+\delta(\omega+50\pi)
++\delta(\omega-100\pi)+\delta(\omega+100\pi)
++\delta(\omega-150\pi)+\delta(\omega+150\pi) \\
+&+\delta(\omega-300\pi)+\delta(\omega+300\pi)
+\big)
+&&
+\end{flalign*}
+بنابراین:
+\begin{flalign*}
+y(t)&=\frac{1}{T}\big(\cos(50\pi t)+\cos(100\pi t)+\cos(150\pi t)+\cos(300\pi t)\big) \\
+&=100\big(\cos(50\pi t)+\cos(100\pi t)+\cos(150\pi t)+\cos(300\pi t)\big)
+&&
+\end{flalign*}
+که مولفه‌های $50\pi$ و $100\pi$ ناشی از \lr{aliasing} هستند.

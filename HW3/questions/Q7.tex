@@ -1,0 +1,55 @@
+\subsection*{الف}
+با استفاده از خاصیت مدولاسیون و نوشتن
+$\cos(\omega_c t+\theta)=\frac{1}{2}\left(e^{j(\omega_c t+\theta)}+e^{-j(\omega_c t+\theta)}\right)$
+داریم
+\begin{flalign*}
+V(j\omega)
+&=\frac{1}{2}\left(e^{j\theta}X\big(j(\omega-\omega_c)\big)+e^{-j\theta}X\big(j(\omega+\omega_c)\big)\right) \\
+H_{LP}(j\omega)
+&=
+\begin{cases}
+2 & |\omega|<\omega_0 \\
+0 & \text{سایر}
+\end{cases} \\
+W(j\omega)
+&=H_{LP}(j\omega)\,V(j\omega) \\
+Y(j\omega)
+&=\frac{1}{2}\left(W\big(j(\omega-\omega_c)\big)+W\big(j(\omega+\omega_c)\big)\right) &&
+\end{flalign*}
+
+\subsection*{ب}
+برای سیگنال باندگذر حقیقی می‌نویسیم
+\begin{flalign*}
+x(t)=x_I(t)\cos(\omega_c t)-x_Q(t)\sin(\omega_c t),
+\qquad
+\text{که } X_I,X_Q \text{ کم‌گذر با پهنای باند } <\omega_0 &&
+\end{flalign*}
+با ضرب در $\cos(\omega_c t+\theta)$ و حذف مولفه‌های نزدیک $2\omega_c$ توسط فیلتر کم‌گذر:
+\begin{flalign*}
+w(t)=x_I(t)\cos\theta+x_Q(t)\sin\theta &&
+\end{flalign*}
+در نتیجه
+\begin{flalign*}
+y(t)=\big(x_I(t)\cos\theta+x_Q(t)\sin\theta\big)\cos(\omega_c t) &&
+\end{flalign*}
+اگر $\theta=0$،
+\begin{flalign*}
+y(t)=x_I(t)\cos(\omega_c t) &&
+\end{flalign*}
+پس شرط دقیق برای $y(t)=x(t)$ این است که
+\begin{flalign*}
+x_Q(t)=0
+\quad\Longleftrightarrow\quad
+x(t)=m(t)\cos(\omega_c t),
+\ \ m(t)\ \text{حقیقی و کم‌گذر با پهنای باند }<\omega_0. &&
+\end{flalign*}
+
+\subsection*{ج}
+برای $\theta\neq 0$ داریم
+\begin{flalign*}
+y(t)=\underbrace{x_I(t)\cos\theta\,\cos(\omega_c t)}_{\text{کاهش دامنه مولفه مطلوب}}
++\underbrace{x_Q(t)\sin\theta\,\cos(\omega_c t)}_{\text{جمله تداخلی}} &&
+\end{flalign*}
+راهکار حذف اثر: هم‌فازسازی نوسان‌ساز محلی با حامل با استفاده از
+\lr{PLL}/\lr{Costas loop}
+یا دمدولاسیون \lr{I/Q} و چرخش فازی (اعمال $-\theta$) برای حذف مولفه تداخلی.

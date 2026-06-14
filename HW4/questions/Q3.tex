@@ -1,0 +1,37 @@
+\subsection*{الف}
+طیف فرکانسی با تفکیک مؤلفهٔ حامل و باند جانبی:
+\begin{flalign*}
+    x_{AM}(t) &= A_c\cos(\omega_c t) + A_c\,\mu\, x(t)\cos(\omega_c t) \\
+    X_{AM}(\omega) &= A_c\pi\left[\delta(\omega-\omega_c)+\delta(\omega+\omega_c)\right] \\
+    &\quad + \frac{A_c\mu}{2}\left[X(\omega-\omega_c)+X(\omega+\omega_c)\right] &&
+\end{flalign*}
+توان کل از متوسط زمانی $\langle x_{AM}^2(t)\rangle$ و با توجه به $\langle x(t)\rangle = 0$ و حذف جملات با فرکانس $2\omega_c$:
+\begin{flalign*}
+    P_{AM} &= \left\langle A_c^2\left[1+\mu x(t)\right]^2\cos^2(\omega_c t)\right\rangle \\
+    &= \frac{A_c^2}{2}\left\langle 1 + 2\mu x(t) + \mu^2 x^2(t)\right\rangle \\
+    &= \frac{A_c^2}{2}\left(1 + \mu^2 P_x\right) &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+    x_{DSB}(t) &= A_c\, x(t)\cos(\omega_c t) \\
+    X_{DSB}(\omega) &= \frac{A_c}{2}\left[X(\omega-\omega_c)+X(\omega+\omega_c)\right] &&
+\end{flalign*}
+\begin{flalign*}
+    P_{DSB\text{-}SC} &= \left\langle A_c^2\, x^2(t)\cos^2(\omega_c t)\right\rangle \\
+    &= \frac{A_c^2}{2}\left\langle x^2(t)\right\rangle = \frac{A_c^2}{2}P_x &&
+\end{flalign*}
+
+\subsection*{ج}
+در هر دو روش $P_{info} = \dfrac{A_c^2}{2}\mu^2 P_x$ (توان باندهای جانبی حامل اطلاعات؛ در 
+\lr{DSB-SC}
+با $\mu=1$):
+\begin{flalign*}
+    \eta_{AM} &= \frac{\frac{A_c^2}{2}\mu^2 P_x}{\frac{A_c^2}{2}\left(1+\mu^2 P_x\right)} = \frac{\mu^2 P_x}{1+\mu^2 P_x} \\
+    \eta_{DSB\text{-}SC} &= \frac{\frac{A_c^2}{2}P_x}{\frac{A_c^2}{2}P_x} = 1 &&
+\end{flalign*}
+از آنجا که $\mu^2 P_x \geq 0$، همواره $\eta_{AM} < 1 = \eta_{DSB\text{-}SC}$؛ توان صرف‌شده در مؤلفهٔ حامل $\frac{A_c^2}{2}$ که فاقد اطلاعات است، بازده 
+\lr{AM}
+را پایین می‌آورد، حال آنکه در 
+\lr{DSB-SC}
+کل توان به انتقال اطلاعات اختصاص می‌یابد.

@@ -1,0 +1,22 @@
+از معادلهٔ سنتز با جای‌گذاری مستقیم $m = -2n+3$ آغاز می‌کنیم:
+\begin{flalign*}
+    y[n] &= x[-2n+3] = \sum_{k=0}^{3} a_k\, e^{j k \frac{\pi}{2}(-2n+3)} \\
+         &= \sum_{k=0}^{3} \underbrace{a_k\, e^{j \frac{3k\pi}{2}}}_{c_k}\; e^{-j k \pi n} &&
+\end{flalign*}
+
+چون $e^{-jk\pi n}$ تنها به زوج یا فرد بودن $k$ وابسته است، پریود $y[n]$ برابر $N'=2$ و فرکانس پایه‌اش $\pi$ می‌شود؛ پس جملات بر حسب $k \bmod 2$ گرد می‌آیند. ضرایب $c_k = a_k e^{j3k\pi/2}$:
+\begin{flalign*}
+    c_0 &= j\,(1) = j, & c_1 &= 1\,(-j) = -j, \\
+    c_2 &= (-j)(-1) = j, & c_3 &= (-1)(j) = -j &&
+\end{flalign*}
+
+با توجه به $e^{-j k\pi n} = e^{j\pi n}$ برای $k$ فرد و $=1$ برای $k$ زوج:
+\begin{flalign*}
+    b_0 &= c_0 + c_2 = 2j \\
+    b_1 &= c_1 + c_3 = -2j &&
+\end{flalign*}
+
+پس $y[n]$ پریودیک با پریود $2$ است و
+\begin{flalign*}
+    y[n] = 2j - 2j\, e^{j\pi n}, \qquad b_0 = 2j,\quad b_1 = -2j. &&
+\end{flalign*}

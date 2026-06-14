@@ -1,0 +1,28 @@
+\subsection*{الف}
+طبق تعریف بخش زوج داریم
+\begin{flalign*}
+    h_e(t)=\frac{h(t)+h(-t)}{2} &&
+\end{flalign*}
+از آن‌جا که سیستم علی است، برای $t<0$ داریم $h(t)=0$ و برای $t>0$ نیز $h(-t)=0$. بنابراین
+\begin{flalign*}
+    t>0:\quad h_e(t)=\frac{h(t)}{2}\;\Rightarrow\; h(t)=2h_e(t)\\
+    t<0:\quad h(t)=0 &&
+\end{flalign*}
+
+\subsection*{ب}
+با توجه به اینکه
+\lr{FT}
+بخش زوج برابر $H_R(j\omega)$ است، تبدیل معکوس می‌دهد:
+\begin{flalign*}
+    h_e(t)=\frac{1}{2\pi}\int_{-W}^{W} e^{j\omega t}\,d\omega
+    =\frac{1}{2\pi}\left[\frac{e^{j\omega t}}{jt}\right]_{-W}^{W}
+    =\frac{1}{\pi}\frac{\sin(Wt)}{t} &&
+\end{flalign*}
+پس با استفاده از بند (الف):
+\begin{flalign*}
+    h(t)=2h_e(t)u(t)=\frac{2}{\pi}\frac{\sin(Wt)}{t}\,u(t) &&
+\end{flalign*}
+و مقدار حدی در $t=0$ برابر $h(0)=\frac{2W}{\pi}$ است.
+
+\subsection*{ج}
+بله؛ چون $h(t)=0$ برای $t<0$، پاسخ ضربه فقط برای $t\ge 0$ غیرصفر است، پس سیستم علی است.
