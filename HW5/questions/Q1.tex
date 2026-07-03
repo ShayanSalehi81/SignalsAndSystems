@@ -1,0 +1,27 @@
+\subsection*{آ}
+سیگنال را به دو بخش علّی و ضدعلّی تجزیه می‌کنیم:
+\begin{flalign*}
+x[n] &= n \left(\frac{1}{2}\right)^n u[n] + n 2^n u[-n-1] &&
+\end{flalign*}
+با استفاده از تبدیل‌های پایه و خاصیت مشتق‌گیری در حوزهٔ $z$:
+\begin{flalign*}
+\left(\frac{1}{2}\right)^n u[n] &\overset{\mathcal{Z}}{\longleftrightarrow} \frac{1}{1 - 0.5 z^{-1}} \quad , \quad |z| > 0.5 \\
+n \left(\frac{1}{2}\right)^n u[n] &\overset{\mathcal{Z}}{\longleftrightarrow} -z \frac{d}{dz} \left( \frac{1}{1 - 0.5 z^{-1}} \right) = \frac{0.5 z^{-1}}{(1 - 0.5 z^{-1})^2} &&
+\end{flalign*}
+\begin{flalign*}
+-2^n u[-n-1] &\overset{\mathcal{Z}}{\longleftrightarrow} \frac{1}{1 - 2 z^{-1}} \quad , \quad |z| < 2 \\
+n 2^n u[-n-1] &\overset{\mathcal{Z}}{\longleftrightarrow} -z \frac{d}{dz} \left( \frac{-1}{1 - 2 z^{-1}} \right) = \frac{-2 z^{-1}}{(1 - 2 z^{-1})^2} &&
+\end{flalign*}
+تبدیل نهایی در فرم بسته (\text{\lr{Closed-form}}):
+\begin{flalign*}
+X(z) &= \frac{0.5 z^{-1}}{(1 - 0.5 z^{-1})^2} - \frac{2 z^{-1}}{(1 - 2 z^{-1})^2} &&
+\end{flalign*}
+
+\subsection*{ب}
+ناحیهٔ همگرایی اشتراک نواحی همگرایی دو بخش سیگنال است:
+\begin{flalign*}
+\text{\lr{ROC}}: \quad 0.5 < |z| < 2 &&
+\end{flalign*}
+
+\subsection*{ج}
+از آنجا که دایرهٔ واحد ($|z|=1$) درون ناحیهٔ همگرایی قرار دارد، \lr{DTFT} سیگنال وجود دارد.

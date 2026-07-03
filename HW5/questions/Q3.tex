@@ -1,0 +1,28 @@
+\subsection*{آ}
+با توجه به حقیقی بودن $h[n]$، صفرها و قطب‌ها مزدوج مختلط هستند:
+\begin{flalign*}
+z_{1,2} &= e^{\pm j\frac{\pi}{2}} = \pm j \\
+p_{1,2} &= 0.5 e^{\pm j\frac{\pi}{4}} &&
+\end{flalign*}
+\begin{flalign*}
+H(z) &= K \frac{(1 - jz^{-1})(1 + jz^{-1})}{(1 - 0.5e^{j\frac{\pi}{4}}z^{-1})(1 - 0.5e^{-j\frac{\pi}{4}}z^{-1})} \\
+&= K \frac{1 + z^{-2}}{1 - \frac{\sqrt{2}}{2}z^{-1} + 0.25z^{-2}} &&
+\end{flalign*}
+با اعمال بهرهٔ \text{\lr{DC}} برابر با یک ($H(e^{j0}) = 1$):
+\begin{flalign*}
+H(1) &= 1 \implies K \frac{2}{1.25 - \frac{\sqrt{2}}{2}} = 1 \implies K = \frac{5 - 2\sqrt{2}}{8} &&
+\end{flalign*}
+با توجه به علّی بودن سیستم، ناحیهٔ همگرایی خارج از بزرگترین قطب است:
+\begin{flalign*}
+H(z) &= \frac{5 - 2\sqrt{2}}{8} \left( \frac{1 + z^{-2}}{1 - \frac{\sqrt{2}}{2}z^{-1} + 0.25z^{-2}} \right), \quad \text{\lr{ROC}}: |z| > 0.5 &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+|H(e^{j\pi})| &= |H(-1)| = \frac{5 - 2\sqrt{2}}{8} \left| \frac{1 + (-1)^{-2}}{1 - \frac{\sqrt{2}}{2}(-1)^{-1} + 0.25(-1)^{-2}} \right| \\
+&= \frac{5 - 2\sqrt{2}}{8} \left( \frac{2}{1.25 + \frac{\sqrt{2}}{2}} \right) \\
+&= \frac{5 - 2\sqrt{2}}{5 + 2\sqrt{2}} = \frac{33 - 20\sqrt{2}}{17} &&
+\end{flalign*}
+
+\subsection*{ج}
+خیر. شرط فاز خطی تقارن در پاسخ ضربه است که ایجاب می‌کند ریشه‌های تابع تبدیل دارای تقارن متقابل باشند (به ازای هر قطب $p$، قطبی در $1/p$ نیز وجود داشته باشد). این سیستم تنها دارای قطب در شعاع $0.5$ است و فاقد قطب در شعاع $2$ می‌باشد، بنابراین نمی‌تواند فاز خطی داشته باشد.

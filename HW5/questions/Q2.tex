@@ -1,0 +1,24 @@
+\subsection*{آ}
+با اعمال $x(t) = \delta(t)$:
+\begin{flalign*}
+h(t) &= \delta(t-1) + \int_{-\infty}^{t} e^{-(t-\tau)} \delta(\tau-1) ,\mathrm{d}\tau \\
+&= \delta(t-1) + e^{-(t-1)}u(t-1) &&
+\end{flalign*}
+
+\subsection*{ب}
+در حوزهٔ لاپلاس داریم:
+\begin{flalign*}
+H(s) &= e^{-s} + \frac{e^{-s}}{s+1} = e^{-s} \left(\frac{s+2}{s+1}\right) &&
+\end{flalign*}
+سیستم معکوس‌پذیر است زیرا تابع تبدیل معکوس آن وجود دارد:
+\begin{flalign*}
+H_{inv}(s) &= \frac{1}{H(s)} = e^s \left(\frac{s+1}{s+2}\right) = e^s \left(1 - \frac{1}{s+2}\right) \\
+\implies h_{inv}(t) &= \delta(t+1) - e^{-2(t+1)}u(t+1) &&
+\end{flalign*}
+
+\subsection*{ج}
+خیر. شرط علی بودن، $h_{inv}(t) = 0$ به ازای $t < 0$ است، در حالی که:
+\begin{flalign*}
+-1 < t < 0 \implies h_{inv}(t) = -e^{-2(t+1)} \neq 0 &&
+\end{flalign*}
+از این رو سیستم معکوس \text{\lr{Causal}} نیست.

@@ -1,0 +1,35 @@
+\subsection*{آ}
+با تجزیه کسرها داریم:
+\begin{flalign*}
+X(s) = \frac{1}{(s+1)(s+2)} = \frac{1}{s+1} - \frac{1}{s+2} &&
+\end{flalign*}
+نواحی همگرایی (\text{\lr{ROC}}) و سیگنال‌های متناظر:
+\begin{flalign*}
+1) \ & \text{Re}{s} > -1 \implies x_1(t) = (e^{-t} - e^{-2t})u(t) \\
+2) \ & \text{Re}{s} < -2 \implies x_2(t) = -(e^{-t} - e^{-2t})u(-t) \\
+3) \ & -2 < \text{Re}{s} < -1 \implies x_3(t) = -e^{-t}u(-t) - e^{-2t}u(t) &&
+\end{flalign*}
+
+\subsection*{ب}
+با جایگذاری $s = \sigma + j\omega$ در تعریف تبدیل لاپلاس، شرط همگرایی، کراندار بودن انتگرال زیر است:
+\begin{flalign*}
+|X(s)| \leq \int_{-\infty}^{+\infty} |x(t)| e^{-\sigma t} , \dd t < \infty &&
+\end{flalign*}
+اعمال این شرط برای هر سیگنال:
+\begin{flalign*}
+x_1(t): \int_{0}^{+\infty} (e^{-t} - e^{-2t}) e^{-\sigma t} , \dd t < \infty &\implies (\sigma+1>0) \land (\sigma+2>0) \implies \sigma > -1 \\
+x_2(t): \int_{-\infty}^{0} (e^{-2t} - e^{-t}) e^{-\sigma t} , \dd t < \infty &\implies (\sigma+2<0) \land (\sigma+1<0) \implies \sigma < -2 \\
+x_3(t): \int_{-\infty}^{0} e^{-t} e^{-\sigma t} , \dd t + \int_{0}^{+\infty} e^{-2t} e^{-\sigma t} , \dd t < \infty &\implies (\sigma+1<0) \land (\sigma+2>0) \implies -2 < \sigma < -1 &&
+\end{flalign*}
+
+\subsection*{ج}
+شرط وجود تبدیل فوریه، شمول محور موهومی ($\sigma=0$) در ناحیه همگرایی است:
+\begin{flalign*}
+\text{\lr{ROC}}_1 &: \sigma > -1 \implies (0 \in \text{\lr{ROC}}_1) \implies \text{تبدیل فوریه دارد.} \\
+\text{\lr{ROC}}_2 &: \sigma < -2 \implies (0 \notin \text{\lr{ROC}}_2) \implies \text{تبدیل فوریه ندارد.} \\
+\text{\lr{ROC}}*3 &: -2 < \sigma < -1 \implies (0 \notin \text{\lr{ROC}}*3) \implies \text{تبدیل فوریه ندارد.} &&
+\end{flalign*}
+قرار داشتن $\sigma=0$ در ناحیه همگرایی، معادل با انتگرال‌پذیری مطلق (\text{\lr{Absolute Integrability}}) سیگنال در حوزه زمان است:
+\begin{flalign*}
+\int*{-\infty}^{+\infty} |x(t)| e^{0} , \dd t = \int*{-\infty}^{+\infty} |x(t)| , \dd t < \infty &&
+\end{flalign*}
