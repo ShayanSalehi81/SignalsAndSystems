@@ -1,0 +1,65 @@
+\subsection*{الف}
+
+\begin{flalign*}
+    H(z)
+    &=\frac{Y(z)}{X(z)}
+      =\frac{1}{1-\frac56z^{-1}+\frac16z^{-2}} &&\\
+    &=\frac{1}{\left(1-\frac12z^{-1}\right)
+                     \left(1-\frac13z^{-1}\right)}
+      =\frac{z^2}{\left(z-\frac12\right)\left(z-\frac13\right)} &&
+\end{flalign*}
+\begin{flalign*}
+    \text{قطب‌ها:}\quad
+    \mathcal P&=\left\{\frac12,\frac13\right\}, &&\\
+    \text{صفرها:}\quad
+    \mathcal Z_0&=\{0,0\}. &&
+\end{flalign*}
+
+\subsection*{ب}
+
+برای سیستم علّی، ناحیهٔ \lr{ROC} خارج از خارجی‌ترین قطب است:
+\begin{flalign*}
+    \mathcal R&:\quad |z|>\frac12, &&\\
+    |z|=1&\subset\mathcal R
+    \quad\Longrightarrow\quad
+    \text{سیستم \lr{BIBO}-پایدار است}. &&
+\end{flalign*}
+
+\subsection*{ج}
+
+\begin{flalign*}
+    H(z)
+    &=\frac{3}{1-\frac12z^{-1}}
+      -\frac{2}{1-\frac13z^{-1}}, &&\\
+    h[n]
+    &=\left(3\left(\frac12\right)^n
+      -2\left(\frac13\right)^n\right)u[n]. &&
+\end{flalign*}
+
+\subsection*{د}
+
+\begin{flalign*}
+    X(z)&=\frac{1}{1-\frac12z^{-1}},
+    \qquad |z|>\frac12, &&\\
+    Y(z)&=H(z)X(z)
+      =\frac{1}
+      {\left(1-\frac12z^{-1}\right)^2
+       \left(1-\frac13z^{-1}\right)} &&\\
+    &=\frac{3}{\left(1-\frac12z^{-1}\right)^2}
+      -\frac{6}{1-\frac12z^{-1}}
+      +\frac{4}{1-\frac13z^{-1}}. &&
+\end{flalign*}
+\begin{flalign*}
+    y[n]
+    &=\left[
+       3(n+1)\left(\frac12\right)^n
+       -6\left(\frac12\right)^n
+       +4\left(\frac13\right)^n
+      \right]u[n] &&\\
+    &=\left[
+       3(n-1)\left(\frac12\right)^n
+       +4\left(\frac13\right)^n
+      \right]u[n]. &&
+\end{flalign*}
+
+ضریب $n$ به‌علت هم‌مکانی قطب ورودی و سیستم در $z=\frac12$ و تشکیل قطب مرتبهٔ دوم ظاهر می‌شود.

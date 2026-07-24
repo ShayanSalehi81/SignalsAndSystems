@@ -1,0 +1,66 @@
+{
+  "audio": {
+    "2.mp3": {
+      "output": "outputs\\audio\\enhanced_2.wav",
+      "original_duration_s": 214.23020408163265,
+      "final_duration_s": 168.30113378684808,
+      "proxy_snr_before_db": 31.403129597555445,
+      "proxy_snr_after_db": 42.986751567481875,
+      "echo": {
+        "delay_seconds": 0.041,
+        "delay_samples": 904,
+        "normalized_peak": 0.015485249415133627,
+        "prominence": 0.03147634990860929,
+        "gain": 0.00242290157794095,
+        "apply": false
+      },
+      "tones": []
+    },
+    "3.mp3": {
+      "output": "outputs\\audio\\enhanced_3.wav",
+      "original_duration_s": 188.16,
+      "final_duration_s": 187.04544217687075,
+      "proxy_snr_before_db": 29.665276598991277,
+      "proxy_snr_after_db": 29.894685615181164,
+      "echo": {
+        "delay_seconds": 0.064,
+        "delay_samples": 1411,
+        "normalized_peak": 0.02942349012238793,
+        "prominence": 0.05624974110251284,
+        "gain": 0.01567542670052846,
+        "apply": true
+      },
+      "tones": []
+    },
+    "4.mp3": {
+      "output": "outputs\\audio\\enhanced_4.wav",
+      "original_duration_s": 154.25306122448978,
+      "final_duration_s": 117.17079365079366,
+      "proxy_snr_before_db": 23.742232143238393,
+      "proxy_snr_after_db": 29.049101597721236,
+      "echo": {
+        "delay_seconds": 0.0425,
+        "delay_samples": 937,
+        "normalized_peak": 0.028361465829573152,
+        "prominence": 0.04513486957911848,
+        "gain": 0.0032365892233580016,
+        "apply": false
+      },
+      "tones": []
+    }
+  },
+  "graded_images": {
+    "Well1.jpg": {
+      "polarity": "dark",
+      "continuity_score": 0.8745129465625296,
+      "mask": "outputs\\images\\Well1_primary_mask.png",
+      "overlay": "outputs\\images\\Well1_primary_overlay.png"
+    },
+    "well2.png": {
+      "polarity": "dark",
+      "continuity_score": 1.442684402173313,
+      "mask": "outputs\\images\\well2_primary_mask.png",
+      "overlay": "outputs\\images\\well2_primary_overlay.png"
+    }
+  }
+}

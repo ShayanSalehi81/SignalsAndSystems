@@ -1,0 +1,30 @@
+\subsection*{الف}
+با اعمال تبدیل لاپلاس و شرایط اولیهٔ صفر:
+\begin{flalign*}
+    (s^2+5s+6)Y(s)&=(s+1)X(s) &&\\
+    H(s)=\frac{Y(s)}{X(s)}
+    &=\frac{s+1}{(s+2)(s+3)} &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+    H(s)&=-\frac{1}{s+2}+\frac{2}{s+3} &&\\
+    h(t)&=\left(-e^{-2t}+2e^{-3t}\right)u(t) &&
+\end{flalign*}
+
+\subsection*{ج}
+\begin{flalign*}
+    p_1&=-2,\qquad p_2=-3 &&\\
+    \operatorname{ROC}&=\{s:\Re(s)>-2\}\supset j\mathbb{R} &&\\
+    \int_{-\infty}^{\infty}|h(t)|\,dt&<\infty
+    \quad\Longrightarrow\quad \text{سیستم پایدار است.} &&
+\end{flalign*}
+
+\subsection*{د}
+\begin{flalign*}
+    X(s)&=\frac{1}{s+1} &&\\
+    Y(s)&=H(s)X(s)
+    =\frac{1}{(s+2)(s+3)}
+    =\frac{1}{s+2}-\frac{1}{s+3} &&\\
+    y(t)&=\left(e^{-2t}-e^{-3t}\right)u(t) &&
+\end{flalign*}

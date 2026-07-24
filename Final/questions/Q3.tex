@@ -1,0 +1,34 @@
+\subsection*{الف}
+\begin{flalign*}
+    f_1&=\frac{300\pi}{2\pi}=150\,\mathrm{Hz},\qquad
+    f_2=\frac{800\pi}{2\pi}=400\,\mathrm{Hz},\qquad
+    f_3=\frac{1200\pi}{2\pi}=600\,\mathrm{Hz} &&\\
+    f_{\max}&=600\,\mathrm{Hz},\qquad
+    f_{\text{\lr{Nyquist rate}}}=2f_{\max}=1200\,\mathrm{Hz} &&\\
+    f_s&=500<1200
+    \quad\Longrightarrow\quad
+    \text{\lr{Aliasing} رخ می‌دهد.} &&
+\end{flalign*}
+
+\subsection*{ب}
+\begin{flalign*}
+    150&\longmapsto 150\,\mathrm{Hz} &&\\
+    400&\longmapsto |400-500|=100\,\mathrm{Hz} &&\\
+    600&\longmapsto |600-500|=100\,\mathrm{Hz}. &&
+\end{flalign*}
+
+\subsection*{ج}
+\begin{flalign*}
+    T_s&=\frac{1}{500} &&\\
+    x[n]&=x(nT_s) &&\\
+        &=3\cos\left(\frac{3\pi}{5}n\right)
+          +2\cos\left(\frac{8\pi}{5}n\right)
+          +\cos\left(\frac{12\pi}{5}n\right) &&\\
+        &=3\cos\left(\frac{3\pi}{5}n\right)
+          +3\cos\left(\frac{2\pi}{5}n\right). &&
+\end{flalign*}
+
+\subsection*{د}
+\begin{flalign*}
+    f_{s,\min}&=2f_{\max}=2(600)=1200\,\mathrm{Hz}. &&
+\end{flalign*}
